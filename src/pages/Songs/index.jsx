@@ -1,23 +1,26 @@
 import React from 'react';
+import { SongsListStyle, SongStyle } from './Styles';
 import songData from '../../assets/fav-songs.json';
 
 class Songs extends React.Component {
   render() {
     return (
-      <div>
-        Songs
+      <SongsListStyle>
         {
           songData.map((song) => {
             return (
-              <div>
-                { song.title }
-                { song.artist }
-                { song.year }
-              </div>
+              <SongStyle>
+                <img src={song.imgSrc} />
+                <div>
+                  <span> { song.title } </span>
+                  <span> { song.artist } </span>
+                  <span> { song.year } </span>
+                </div>
+              </SongStyle>
             )
           })
         }
-      </div>
+      </SongsListStyle>
     )
   }
 }

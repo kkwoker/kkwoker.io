@@ -1,5 +1,10 @@
 import React from 'react';
-import { BioStyle, HomeStyle } from './Styles';
+import {
+  BioStyle,
+  HomeStyle,
+  HomeContainer,
+  HeaderCardStyle
+} from './Styles';
 
 // const kinnanSnowImgSrc = 'https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/26994021_10157030665366729_2062782440780858684_n.jpg?_nc_cat=0&oh=2a7cdf083e37b5c2d070ed514e95e0ae&oe=5B72708C';
 // const kinnanProfileImg = 'https://lh3.googleusercontent.com/-lqtrLWK9aY-I5sAr6t6LW6B2k6M8XKKxmmjRxzVvYJ1kgaXGERB4ROEB6uRivnWr2MRYsnV90xJOLu3Ia2Jw8Nd0_PwbZ31cJIGjV-y6HW1_D27rQu_NwlxxHq2srN2arqHb6l0rf15-KNHhlCEyc5VbaCBNhMiMYcU96pnpI59tC2RPS-SjO9Or3YvhagkvoOwaIOF9L6HXCb6B7pkH_I3N43DJfuJ5Qt2OsO2WnXJuy9j2EQCpLraodJnvJ8lmPU3vTQXFlGJy22q8PxyR9kN-evOnFFPOTKywoZujADFBJx1awS2Pv91bcy4K_8dWiwJiZ1wazauFH1Gh_2EWOCep8vmUZwTMUNzWuutsWDBUUNsTvqORmFIQ8yEDnsrdGJDrCGmwZFVipI2JxKldufuNANhuPk_baT2crEqFId4w9qNZ29_N0cJWnRBP7R7X3ljnIvhM_xKHPoiGpa3vH3f28v7POHesVdeH_KbB5A1L7S7c2zIWeW-pxbKI-cxhiV62bW58aThN5tYshjrWvlObzLFeWXA08dNYw-7veXHPLPrJ4EFoQr9DUnQfocRZdy2c8W4Z0KrVXVHAnwLkoBv0epwqkOgIkyoTJA=w528-h548-no';
@@ -9,18 +14,15 @@ const kinnanFilteredImg = 'https://lh3.googleusercontent.com/py65pQqDlPjStj-gdkX
 class Home extends React.Component {
   render() {
     return (
-      <HomeStyle>
-        <div>
-          {/* <img className='profile' src={kinnanSnowImgSrc} /> */}
-          {/* <img className='profile' src={kinnanProfileImg} /> */}
-          <div className='row'>
+      <HomeContainer>
+        <HomeStyle>
+          <HeaderCardStyle>
             <img src={kinnanFilteredImg} alt='profile of Kinnan Kwok'/>
             <div>
               <h1> Kinnan Kwok </h1>
               <h2> Software Developer </h2>
             </div>
-          </div>
-          {/* <img className='profile' src={bitmojiHi} /> */}
+          </HeaderCardStyle>
           <BioStyle>
             <p>
               I am a computer science student at SFU and a software developer at TELUS digital.
@@ -38,8 +40,8 @@ class Home extends React.Component {
               <a href="songs" >Songs</a>
             </p>
           </BioStyle>
-        </div>
-      </HomeStyle>
+        </HomeStyle>
+      </HomeContainer>
     );
   }
 }

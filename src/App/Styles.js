@@ -4,7 +4,7 @@ import { media } from '../style-utils';
 export const AppStyle = styled.div`
   h1 {
     margin-bottom: 10px;
-    ${ media.medium`
+    ${ media.mediumUp`
       font-size: 65px;
     `}
   }
@@ -12,7 +12,7 @@ export const AppStyle = styled.div`
   h2 {
     font-size: 15px;
     margin-left: 2px;
-    ${ media.medium`
+    ${ media.mediumUp`
       font-size: 25px;
     `}
   }
