@@ -2,7 +2,6 @@ import React from 'react';
 import {
   BioStyle,
   HomeStyle,
-  HomeContainer,
   HeaderCardStyle
 } from './Styles';
 
@@ -14,34 +13,32 @@ const kinnanFilteredImg = 'https://lh3.googleusercontent.com/py65pQqDlPjStj-gdkX
 class Home extends React.Component {
   render() {
     return (
-      <HomeContainer>
-        <HomeStyle>
-          <HeaderCardStyle>
-            <img src={kinnanFilteredImg} alt='profile of Kinnan Kwok'/>
-            <div>
-              <h1> Kinnan Kwok </h1>
-              <h2> Software Developer </h2>
-            </div>
-          </HeaderCardStyle>
-          <BioStyle>
-            <p>
-              I am a computer science student at SFU and a software developer at TELUS digital.
-            </p>
-            <p>
-              Some of my projects include  e-commerce applications such as
-              checkout and fullfilment at TELUS.com.
-            </p>
-            <p>
-              I also enjoy talking about mathematics and finding proofs in logic puzzles
-            </p>
-            <p>
-              Outside of work, I enjoy hiking, climbing, and snowboarding.
-              Here's some of the <a href="music" >music</a> I listen to.
+      <HomeStyle>
+        <HeaderCardStyle>
+          <img src={kinnanFilteredImg} alt='profile of Kinnan Kwok'/>
+          <div>
+            <h1> Kinnan Kwok </h1>
+            <h2> Software Developer </h2>
+          </div>
+        </HeaderCardStyle>
+        <BioStyle>
+          <p>
+            I am a computer science student at SFU and a software developer at TELUS digital.
+          </p>
+          <p>
+            Some of my projects include  e-commerce applications such as
+            checkout and fullfilment at TELUS.com.
+          </p>
+          <p>
+            I also enjoy talking about mathematics and finding proofs in logic puzzles
+          </p>
+          <p>
+            Outside of work, I enjoy hiking, climbing, and snowboarding.
+            Here's some of the <a href="music" >music</a> I listen to.
 
-            </p>
-          </BioStyle>
-        </HomeStyle>
-      </HomeContainer>
+          </p>
+        </BioStyle>
+      </HomeStyle>
     );
   }
 }

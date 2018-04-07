@@ -17,3 +17,13 @@ export const AppStyle = styled.div`
     `}
   }
 `;
+
+export const AppContainerStyle = styled.div`
+  display: flex;
+  justify-content: center;
+
+  ${ media.mediumUp`
+    margin-right: 100px;
+    margin-left: 100px;
+  `}
+`;

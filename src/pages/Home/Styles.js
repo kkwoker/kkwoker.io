@@ -29,16 +29,6 @@ export const HomeStyle = styled.div`
   }
 `;
 
-export const HomeContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  
-  ${ media.mediumUp`
-    margin-right: 100px;
-    margin-left: 100px;
-  `}
-`;
-
 export const HeaderCardStyle = styled.div`
   display: flex;
   max-width: 400px;

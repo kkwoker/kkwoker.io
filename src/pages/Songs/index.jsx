@@ -10,7 +10,7 @@ class Songs extends React.Component {
           songData.map((song) => {
             return (
               <SongStyle>
-                <img src={song.imgSrc} />
+                <img src={song.imgSrc} alt={song.title} />
                 <div>
                   <span> { song.title } </span>
                   <span> { song.artist } </span>

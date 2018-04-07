@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppStyle } from './Styles';
+import { AppStyle, AppContainerStyle } from './Styles';
 import Home from '../pages/Home';
 import ComingSoon from '../pages/ComingSoon';
 import Songs from '../pages/Songs';
@@ -15,14 +15,16 @@ class App extends Component {
     return (
       <AppStyle>
         <BrowserRouter>
-          <div className="App">
-            <Route exact={true} path='/' render={() => (
-              <Home />
-            )} />
-            <Route exact={true} path='/music' render={() => (
-              <Songs />
-            )} />
-          </div>
+          <AppContainerStyle>
+            <div className="App">
+              <Route exact={true} path='/' render={() => (
+                <Home />
+              )} />
+              <Route exact={true} path='/music' render={() => (
+                <Songs />
+              )} />
+            </div>
+          </AppContainerStyle>
         </BrowserRouter>
       </AppStyle>
     );
