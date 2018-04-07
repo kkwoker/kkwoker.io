@@ -14,8 +14,18 @@ img.profile {
 
 h1 {
   font-size: 100px;
+  margin-bottom: 10px;
 }
 
 .row {
   display: flex;
+}
+
+.bio {
+  border: #88aeff6e;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 10px 30px;
+  height: 500px;
 }

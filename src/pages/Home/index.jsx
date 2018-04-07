@@ -12,12 +12,15 @@ class Home extends React.Component {
         {/* <img className='profile' src={kinnanProfileImg} /> */}
         <div className='row'>
           <img className='profile' src={kinnanFilteredImg} />
-          <h1> Kinnan Kwok </h1>
+          <div>
+            <h1> Kinnan Kwok </h1>
+            <h2> Software Developer </h2>
+          </div>
         </div>
         {/* <img className='profile' src={bitmojiHi} /> */}
-        <div classNAme='bio'>
+        <div className='bio'>
           <p>
-            A computer science student at SFU and a software developer at TELUS.
+            A computer science student at SFU and a software developer at TELUS digital.
           </p>
           <p>
             Some of my projects include  e-commerce applications such as
@@ -27,8 +30,8 @@ class Home extends React.Component {
             I also enjoy talking about mathematics and finding proofs in logic puzzles
           </p>
           <p>
-            Outside of work, I enjoy hiking, climbing, and snowboarding
-            I listen to alternative and indie pop music. <a>Here's some of my favourites.</a>
+            Outside of work, I enjoy hiking, climbing, and snowboarding.
+            Here's some of the music I listen to.
             <a href="songs" >Songs</a>
           </p>
         </div>
