@@ -1,5 +1,10 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { media } from '../../style-utils';
+
+const fadeIn = keyframes`
+  from { opacity: 0; }
+  to   { opacity: 1; }
+`;
 
 export const BioStyle = styled.div`
   border: #88aeff6e;
@@ -15,16 +20,25 @@ export const BioStyle = styled.div`
 `;
 
 export const HomeStyle = styled.div`
-  img {
-    width: 25%;
-    height: 25%;
+  .fade-in {
+    display: 'inherit';
+    animation: ${fadeIn} 0.2s;
+  }
+  .hidden {
+    display: 'none';
+  }
+  .profile-image {
+    width: 92.5px;
+    height: 98px;
     margin: 15px;
     border-radius: 50%;
     max-width: 200px;
 
+    background-color: #cacaca;
+
     ${ media.mediumUp`
-      width: 50%;
-      height: 50%;
+      width: 200px;
+      height: 212px;
     `}
   }
 `;

@@ -25,3 +25,11 @@ body {
   padding: 15px;
   font-family: sans-serif;
 }
+
+.hidden {
+  visibility: hidden;
+}
+
+.display-none {
+  display: none;
+}

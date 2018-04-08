@@ -1,7 +1,16 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const fadeIn = keyframes`
+  from { opacity: 0; }
+  to   { opacity: 1; }
+`;
 
 export const SongsListStyle = styled.div`
-  img {
+  .fade-in {
+    display: 'inherit';
+    animation: ${fadeIn} 0.2s;
+  }
+  .image {
     width: 150px;
   }
   display: flex;
