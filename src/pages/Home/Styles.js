@@ -16,6 +16,8 @@ export const BioStyle = styled.div`
 
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
+  position: relative;
+
   ${ media.mediumUp`
     max-width: 700px;
   `}
@@ -59,4 +61,12 @@ export const HeaderCardStyle = styled.div`
     margin: inherit;
     max-width: inherit;
   `}
-`
+`;
+
+export const ContactStyle = styled.div`
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 15px;
+
+  font-size: 12px;
+`;

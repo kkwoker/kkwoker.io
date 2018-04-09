@@ -2,7 +2,8 @@ import React from 'react';
 import {
   BioStyle,
   HomeStyle,
-  HeaderCardStyle
+  HeaderCardStyle,
+  ContactStyle
 } from './Styles';
 
 const kinnanFilteredImg = 'https://pbs.twimg.com/profile_images/983127371497615361/d6CPdT72_400x400.jpg';
@@ -52,6 +53,10 @@ class Home extends React.Component {
           <p>
             Check out some of the <a href="music" >music</a> I listen to.
           </p>
+
+          <ContactStyle>
+            Contact me at kkwoker@gmail.com
+          </ContactStyle>
         </BioStyle>
       </HomeStyle>
     );
