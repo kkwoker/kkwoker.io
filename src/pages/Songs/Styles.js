@@ -15,6 +15,7 @@ export const SongsListStyle = styled.div`
   }
   display: flex;
   flex-wrap: wrap;
+  max-width: 950px;
 `;
 
 export const SongStyle = styled.div`
