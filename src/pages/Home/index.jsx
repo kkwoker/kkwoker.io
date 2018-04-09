@@ -48,11 +48,8 @@ class Home extends React.Component {
           </p>
           <p>
             Outside of work, I enjoy hiking, climbing, and snowboarding.
-            Here's some of the <a href="music" >music</a> I listen to.
+            {/* Here's some of the <a href="music" >music</a> I listen to. */}
           </p>
-          <div>
-            TWITTER FEED. What am I talking about? What am I up to?
-          </div>
         </BioStyle>
       </HomeStyle>
     );

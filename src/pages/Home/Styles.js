@@ -14,6 +14,8 @@ export const BioStyle = styled.div`
   padding: 10px 30px;
   height: 500px;
 
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
   ${ media.mediumUp`
     max-width: 700px;
   `}
@@ -22,7 +24,9 @@ export const BioStyle = styled.div`
 export const HomeStyle = styled.div`
   .fade-in {
     display: 'inherit';
-    animation: ${fadeIn} 0.2s;
+    animation-name: ${fadeIn};
+    animation-duration: 0.2s;
+    animation-timing-function: ease-out;
   }
   .hidden {
     display: 'none';
@@ -36,8 +40,11 @@ export const HomeStyle = styled.div`
 
     background-color: #cacaca;
 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
     ${ media.mediumUp`
       width: 200px;
+      min-width: 200px;
       height: 212px;
     `}
   }
