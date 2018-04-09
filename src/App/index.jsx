@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { AppStyle, AppContainerStyle } from './Styles';
 import Home from '../pages/Home';
-import ComingSoon from '../pages/ComingSoon';
+// import ComingSoon from '../pages/ComingSoon';
 import Songs from '../pages/Songs';
 import NotFound from '../pages/NotFound';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   render() {
-    if (process.env.NODE_ENV === 'production') {
-      return (
-        <ComingSoon />
-      )
-    }
+    // if (process.env.NODE_ENV === 'production') {
+    //   return (
+    //     <ComingSoon />
+    //   )
+    // }
     return (
       <AppStyle>
         <BrowserRouter>
