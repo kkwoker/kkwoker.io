@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { AppStyle, AppContainerStyle } from './Styles';
 import Home from '../pages/Home';
-// import ComingSoon from '../pages/ComingSoon';
+import Blog from '../pages/Blog';
 import Songs from '../pages/Songs';
 import NotFound from '../pages/NotFound';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
@@ -24,6 +24,9 @@ class App extends Component {
                 )} />
                 <Route exact={true} path='/music' render={() => (
                   <Songs />
+                )} />
+                <Route exact={true} path='/blog' render={() => (
+                  <Blog />
                 )} />
                 <Route exact={true} path='*' render={() => (
                   <NotFound />
