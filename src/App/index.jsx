@@ -2,17 +2,13 @@ import React, { Component } from 'react';
 import { AppStyle, AppContainerStyle } from './Styles';
 import Home from '../pages/Home';
 import Blog from '../pages/Blog';
+import BlogPost from '../pages/BlogPost';
 import Songs from '../pages/Songs';
 import NotFound from '../pages/NotFound';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   render() {
-    // if (process.env.NODE_ENV === 'production') {
-    //   return (
-    //     <ComingSoon />
-    //   )
-    // }
     return (
       <AppStyle>
         <BrowserRouter>
@@ -27,6 +23,9 @@ class App extends Component {
                 )} />
                 <Route exact={true} path='/blog' render={() => (
                   <Blog />
+                )} />
+                <Route exact={true} path='/blog/*' render={() => (
+                  <BlogPost />
                 )} />
                 <Route exact={true} path='*' render={() => (
                   <NotFound />

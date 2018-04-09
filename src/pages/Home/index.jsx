@@ -53,12 +53,13 @@ class Home extends React.Component {
           <p>
             Check out some of the <a href="music"> music </a> I listen to.
           </p>
-          <p>
+          {/* <p>
             Here's my <a href="blog"> blog </a>.
-          </p>
+          </p> */}
 
           <ContactStyle>
-            Contact me at kkwoker@gmail.com
+            <div>Contact me at kkwoker@gmail.com</div>
+            <div>Last Updated: April 8th, 2018</div>
           </ContactStyle>
         </BioStyle>
       </HomeStyle>
