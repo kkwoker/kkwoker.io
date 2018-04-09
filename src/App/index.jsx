@@ -3,7 +3,8 @@ import { AppStyle, AppContainerStyle } from './Styles';
 import Home from '../pages/Home';
 import ComingSoon from '../pages/ComingSoon';
 import Songs from '../pages/Songs';
-import { BrowserRouter, Route } from 'react-router-dom';
+import NotFound from '../pages/NotFound';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   render() {
@@ -17,12 +18,17 @@ class App extends Component {
         <BrowserRouter>
           <AppContainerStyle>
             <div className="App">
-              <Route exact={true} path='/' render={() => (
-                <Home />
-              )} />
-              <Route exact={true} path='/music' render={() => (
-                <Songs />
-              )} />
+              <Switch>
+                <Route exact={true} path='/' render={() => (
+                  <Home />
+                )} />
+                <Route exact={true} path='/music' render={() => (
+                  <Songs />
+                )} />
+                <Route exact={true} path='*' render={() => (
+                  <NotFound />
+                )} />
+              </Switch>
             </div>
           </AppContainerStyle>
         </BrowserRouter>
