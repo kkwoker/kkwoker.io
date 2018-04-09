@@ -1,32 +1,19 @@
 import React from 'react';
 import { BlogListStyle } from './Styles';
+import posts from '../../assets/blog-posts';
 
 class Blog extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = { expanded: false };
-  // }
-  // onClick() {
-  //   this.setState((state) => ({ expanded: !state.expanded }));
-  // }
   render() {
-    const blogList = [
-      { name: 'Item1', details: 'Details'},
-      { name: 'Item2', details: 'Details'},
-      { name: 'Item3', details: 'Details'},
-      { name: 'Item4', details: 'Details'},
-      { name: 'Item5', details: 'Details'}
-    ]
     return (
       <div>
         <h1>Blog.</h1>
         <h2>Coming soon...</h2>
 
         <BlogListStyle>
-          { blogList.map(blog =>
-            <a href={`blog/${blog.name}`}>
+          { posts.map(blog =>
+            <a href={`blog/${blog.routeKey}`}>
               <div className='blog-item'>
-                { blog.name }
+                { blog.title }
               </div>
             </a>
           )}

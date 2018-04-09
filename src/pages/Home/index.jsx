@@ -51,14 +51,19 @@ class Home extends React.Component {
             Outside of work, I enjoy hiking, climbing, and snowboarding.
           </p>
           <p>
-            Check out some of the <a href="music"> music </a> I listen to.
+            Check out some of the <a href="music"> music</a> I listen to.
           </p>
           {/* <p>
             Here's my <a href="blog"> blog </a>.
           </p> */}
 
           <ContactStyle>
-            <div>Contact me at kkwoker@gmail.com</div>
+            <div>
+              Contact me at&nbsp;
+              <a href="mailto:kkwoker@gmail.com">
+                kkwoker@gmail.com
+              </a>
+            </div>
             <div>Last Updated: April 8th, 2018</div>
           </ContactStyle>
         </BioStyle>
