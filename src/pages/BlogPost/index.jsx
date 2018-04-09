@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { BodyContentStyle } from './Styles';
 import NotFound from '../NotFound';
-import posts from '../../assets/blog-posts';
+import posts from '../../assets/posts.json';
 import markdown from 'markdown';
 
 class BlogPost extends React.Component {
@@ -28,7 +28,7 @@ class BlogPost extends React.Component {
         <h1>{ renderedPost.title }</h1>
         <h2>{ renderedPost.subtitle }</h2>
         <BodyContentStyle>
-          <div dangerouslySetInnerHTML={{__html: renderedPost.body}} />
+          <div dangerouslySetInnerHTML={{__html: renderedPost.html}} />
         </BodyContentStyle>
         <div>
           <a href='/blog'>Back to blog list</a>

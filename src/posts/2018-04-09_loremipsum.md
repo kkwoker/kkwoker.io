@@ -1,5 +1,6 @@
 ---
-title: "Proving Stable Matching Problem"
+routeKey: "loremipsum"
+title: "Lorem Ipsum"
 date: 2018-01-07T21:01:47-08:00
 tags: [mathematics, algorithms]
 draft: true

@@ -1,6 +1,6 @@
 import React from 'react';
 import { BlogListStyle } from './Styles';
-import posts from '../../assets/blog-posts';
+import posts from '../../assets/posts';
 
 class Blog extends React.Component {
   render() {
