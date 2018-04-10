@@ -20,5 +20,5 @@ fs.readdir(paths.postsDir, (err, files) => {
 
   })
 
-  fs.writeFileSync(paths.appSrc + '/' + 'assets/posts.json', JSON.stringify(postsList));
+  fs.writeFileSync(paths.appSrc + '/' + 'assets/posts.json', JSON.stringify(postsList, null, 2));
 });

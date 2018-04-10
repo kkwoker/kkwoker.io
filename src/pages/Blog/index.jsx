@@ -2,6 +2,8 @@ import React from 'react';
 import { BlogListStyle } from './Styles';
 import posts from '../../assets/posts';
 
+const publishedPosts = posts.filter(post => post.draft === false);
+
 class Blog extends React.Component {
   render() {
     return (
@@ -10,7 +12,7 @@ class Blog extends React.Component {
         <h2>Coming soon...</h2>
 
         <BlogListStyle>
-          { posts.map(blog =>
+          { publishedPosts.map(blog =>
             <a href={`blog/${blog.routeKey}`}>
               <div className='blog-item'>
                 { blog.title }

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { BodyContentStyle } from './Styles';
 import NotFound from '../NotFound';
 import posts from '../../assets/posts.json';
-import markdown from 'markdown';
 
 class BlogPost extends React.Component {
 
@@ -14,8 +13,6 @@ class BlogPost extends React.Component {
   }
 
   render() {
-
-    console.log(markdown.markdown)
 
     const renderedPost = this.findPost();
 

@@ -1,1 +1,23 @@
-[{"routeKey":"loremipsum","title":"Lorem Ipsum","date":"2018-01-08T05:01:47.000Z","tags":["mathematics","algorithms"],"draft":true,"image":{"feature":"/images/abstract-10.jpg"},"html":"<p>A perfect matching S is a matching with the property that each member of M and\neach member of W appears in exactly one pair in S.</p>\n\n<p>blahblahla</p>\n\n<h2>Gale-Shapely Algorithm</h2>\n\n<p><code>\nInitially all m ∈ M and w ∈ W are free\nWhile there is a man m who is free and hasn&#39;t proposed to every woman\n  Choose such a man m\n  Let w be the highest-ranked woman in m&#39;s preference list to whom m has not yet\n  proposed\n  If w is free then\n    (m, w) become engaged\n  Else w is currently engaged to m&#39;\n    If w prefers m&#39; to m then\n      m remains free\n    Else w prefers m to m&#39;\n      (m, w) become engaged\n      m&#39; becomes free\n    EndIf\n  EndIf\nEndWhile\nReturn the set S of engaged pairs\n</code></p>\n\n<h3>Thm 0. The algorithm always stops.</h3>\n\n<p>Finitely number of preferences</p>\n\n<h3>Thm 1. The algorithm arranges stable marriages.</h3>\n\n<p>Proof: Show that no woman can trade up, the husband is the best she can do.</p>\n\n<p>Each man a given woman prefers rejected her on the way. QED</p>\n\n<h3>Thm 2. The algorithm is man-optimal</h3>\n\n<h3>Collorary: The algorithm is woman-pessimal</h3>"},{"routeKey":"testpost","title":"My Test Post","date":"2018-01-08T05:01:47.000Z","draft":true,"image":{"feature":"/images/abstract-10.jpg"},"html":"<h2>This is a test post</h2>\n\n<p>HUE HUE hue</p>"}]
+[
+  {
+    "routeKey": "loremipsum",
+    "title": "Lorem Ipsum",
+    "date": "2018-01-08T05:01:47.000Z",
+    "tags": [
+      "mathematics",
+      "algorithms"
+    ],
+    "draft": true,
+    "image": {
+      "feature": "/images/abstract-10.jpg"
+    },
+    "html": "<p>A perfect matching S is a matching with the property that each member of M and\neach member of W appears in exactly one pair in S.</p>\n\n<p>blahblahla</p>\n\n<h2>Gale-Shapely Algorithm</h2>\n\n<p><code>\nInitially all m ∈ M and w ∈ W are free\nWhile there is a man m who is free and hasn&#39;t proposed to every woman\n  Choose such a man m\n  Let w be the highest-ranked woman in m&#39;s preference list to whom m has not yet\n  proposed\n  If w is free then\n    (m, w) become engaged\n  Else w is currently engaged to m&#39;\n    If w prefers m&#39; to m then\n      m remains free\n    Else w prefers m to m&#39;\n      (m, w) become engaged\n      m&#39; becomes free\n    EndIf\n  EndIf\nEndWhile\nReturn the set S of engaged pairs\n</code></p>\n\n<h3>Thm 0. The algorithm always stops.</h3>\n\n<p>Finitely number of preferences</p>\n\n<h3>Thm 1. The algorithm arranges stable marriages.</h3>\n\n<p>Proof: Show that no woman can trade up, the husband is the best she can do.</p>\n\n<p>Each man a given woman prefers rejected her on the way. QED</p>\n\n<h3>Thm 2. The algorithm is man-optimal</h3>\n\n<h3>Collorary: The algorithm is woman-pessimal</h3>"
+  },
+  {
+    "routeKey": "first-post",
+    "title": "My new site is up!",
+    "date": "2018-01-07T00:00:00.000Z",
+    "draft": false,
+    "html": "<p>I&#39;m really excited, I&#39;ve been working on this website for an entire weekend.\nI know it&#39;s not much, it&#39;s quite simple, but I&#39;ve built it all from scratch.\nNo more static site generators! Just pure React and JavaScript. This will allow\nme to have more control over the website, and most importantly make it feel\nlike my own.</p>\n\n<p>I&#39;ve also built a markdown to HTML converter for my blog so I don&#39;t have to\nwrite in HTML. It&#39;s much easier to get thoughts down like this.</p>"
+  }
+]
