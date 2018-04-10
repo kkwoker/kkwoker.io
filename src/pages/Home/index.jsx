@@ -29,7 +29,9 @@ class Home extends React.Component {
             src={kinnanFilteredImg}
             alt='profile of Kinnan Kwok'
             onLoad={this.onLoad.bind(this)} />
-          <div className={`profile-image ${loadedImg ? 'display-none' : ''}`} />
+          <div className={`profile-image ${loadedImg ? 'display-none' : ''}`}>
+            <div className='loader' />
+          </div>
 
           <div>
             <h1> Kinnan Kwok </h1>

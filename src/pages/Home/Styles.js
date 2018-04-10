@@ -6,6 +6,11 @@ const fadeIn = keyframes`
   to   { opacity: 1; }
 `;
 
+const spin = keyframes`
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+`;
+
 export const BioStyle = styled.div`
   border: #88aeff6e;
   border-width: 2px;
@@ -30,10 +35,20 @@ export const HomeStyle = styled.div`
     animation-duration: 0.2s;
     animation-timing-function: ease-out;
   }
-  .hidden {
-    display: 'none';
+  .loader {
+    border: 2px solid #f3f3f3; /* Light grey */
+    border-top: 2px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: ${spin} 2s linear infinite;
   }
+
   .profile-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 92.5px;
     height: 98px;
     margin: 15px;
