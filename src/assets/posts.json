@@ -16,7 +16,7 @@
   {
     "routeKey": "first-post",
     "title": "My new site is up!",
-    "date": "2018-01-07T00:00:00.000Z",
+    "date": "2018-04-09T00:00:00.000Z",
     "draft": false,
     "html": "<p>I&#39;m really excited, I&#39;ve been working on this website for an entire weekend.\nI know it&#39;s not much, it&#39;s quite simple, but I&#39;ve built it all from scratch.\nNo more static site generators! Just pure React and JavaScript. This will allow\nme to have more control over the website, and most importantly make it feel\nlike my own.</p>\n\n<p>I&#39;ve also built a markdown to HTML converter for my blog so I don&#39;t have to\nwrite in HTML. It&#39;s much easier to get thoughts down like this.</p>"
   }

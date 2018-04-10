@@ -9,7 +9,7 @@ class Blog extends React.Component {
     return (
       <div>
         <h1>Blog.</h1>
-        <h2>Coming soon...</h2>
+        <h2>More coming soon...</h2>
 
         <BlogListStyle>
           { publishedPosts.map(blog =>
