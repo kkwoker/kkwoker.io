@@ -2,7 +2,11 @@ import React from 'react';
 import { BlogListStyle } from './Styles';
 import posts from '../../assets/posts';
 
-const publishedPosts = posts.filter(post => post.draft === false);
+// Not the best way of doing this...
+const publishedPosts = posts
+  .filter(post => post.draft === false)
+  .sort(post => post.date)
+  .reverse();
 
 class Blog extends React.Component {
   render() {
@@ -12,10 +16,11 @@ class Blog extends React.Component {
         <h2>More coming soon...</h2>
 
         <BlogListStyle>
-          { publishedPosts.map(blog =>
-            <a href={`blog/${blog.routeKey}`}>
+          { publishedPosts.map(post =>
+            <a href={`blog/${post.routeKey}`} key={post.routeKey}>
               <div className='blog-item'>
-                { blog.title }
+                <div>{ post.title }</div>
+                <sub>{ new Date(post.date).toDateString() }</sub>
               </div>
             </a>
           )}

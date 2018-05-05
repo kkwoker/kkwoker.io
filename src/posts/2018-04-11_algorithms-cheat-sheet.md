@@ -17,6 +17,38 @@ Data Structures
 ---------------
 #### Binary Tree
 #### Max/min Heaps and Priority Queues
+#### Max-heapify
+```
+BUILD-MAX-HEAP(A):
+    for i = n/2 downto 1
+        MAX_HEAPIFY(A, i)
+```
+
+```
+MAX_HEAPIFY(A, i):
+    if A[i] > A[left(i)] OR A[i] > A[right(i)] then Heapify-down(A, i)
+```
+
+Observe MAX_HEAPIFY takes O(1) for nodes that are 1 level above the leaves.
+
+In general, O(l) time for nodes that are l levels above the leaves.
+
+n/4 nodes with level 1,
+
+n/8 nodes with level 2,
+
+...
+
+1 node at log(n) level
+
+Total amount of work in the for loop:
+n/4 * (1c) + n/8 * (2c) + n/16 * 3c + 1(clogn)
+set n/4 = 2^k
+extract a arithmetic series constant out, we get O(n)
+
+
+
+
 #### Linked Lists
 
 Growth of Functions
@@ -196,6 +228,10 @@ GREEDY-ACTIVITY-SELECTOR(s, f)
 
 #### Cut and Paste argument
 
+eg. Consider any nonempty subproblem S_k, and let a_m be an activity in S_k with
+the earliest finish time. Then a_m is included in some maximum-size subset of mutually compatible activities of S_k
+
+PF: Let A_k be a maximum-size subset of mutually compatible activities in S_k and let a_j be the activity in A_k with the earliest finish time. If a_j = a_m, we are done since we have shown that a_m is in some maximum-size subset of mutually compatible activities of S_k. If a_j != a_m let the set A'_k = A_k - {a_j} U {a_m} be A_k be substituting a_m for a_j. The activities in A'_k are disjoint, which follows because the activities in A_k are disjoint, a_k is the first activity in A_k to finish, and f_m <= f_j. Since |A'_k| = |A_k|, we conclude that A'_k is a maximum size subset of mutually compatible activies of S_k and it includes a_m.
 
 Single Source Shortest Paths
 ----------------------------
@@ -284,7 +320,7 @@ FORD-FULKERSON(G, s, t)
 ```
 O(|E|C) where C is the maximum flow, since the flow value increases by at least 1 unit each iteration
 
- - Capacity Scaling ~> O(E^2logC)
+ - Capacity Scaling ~> O(E^2logC) (Looks for the edges with the highest flows first)
  - Edmonds-Karp ~> O(VE^2) (uses BFS to find the augmenting path)
 
 #### Maximum Bipartite matching

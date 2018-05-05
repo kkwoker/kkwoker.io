@@ -24,7 +24,7 @@ class BlogPost extends React.Component {
       <div>
         <h1>{ renderedPost.title }</h1>
         <h2>{ renderedPost.subtitle }</h2>
-        <div>{ new Date(renderedPost.date).toDateString() }</div>
+        <sub>{ new Date(renderedPost.date).toDateString() }</sub>
         <BodyContentStyle>
           <div dangerouslySetInnerHTML={{__html: renderedPost.html}} />
         </BodyContentStyle>
