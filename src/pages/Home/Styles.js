@@ -17,7 +17,7 @@ export const BioStyle = styled.div`
   border-style: solid;
   border-radius: 10px;
   padding: 10px 30px;
-  height: 500px;
+  padding-bottom: 70px;
 
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
