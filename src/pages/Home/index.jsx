@@ -40,7 +40,7 @@ class Home extends React.Component {
         </HeaderCardStyle>
         <BioStyle>
           <p>
-            I am a computer science student at SFU and a software engineer.
+            I am a computer science student and a software engineer.
           </p>
           <p>
             I have worked on e-commerce applications such as checkout and fullfilment.

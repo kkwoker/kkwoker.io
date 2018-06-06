@@ -24,6 +24,7 @@ class Articles extends React.Component {
             <ArticleCard>
               <a
                 target='_blank'
+                rel='noopener noreferrer'
                 href='https://www.nczonline.net/blog/2012/06/12/the-care-and-feeding-of-software-engineers-or-why-engineers-are-grumpy/'>
                 <ImageLoader src='placeholder' color={this.randomColor()}>
                   <div className='container'>
