@@ -35,15 +35,15 @@ class Home extends React.Component {
 
           <div>
             <h1> Kinnan Kwok </h1>
-            <h2> Software Engineer </h2>
+            <h2> Software Developer </h2>
           </div>
         </HeaderCardStyle>
         <BioStyle>
           <p>
-            I am a computer science student and a software engineer.
+            I am a computer science student at SFU and a software developer at TELUS digital.
           </p>
           <p>
-            I have worked on e-commerce applications such as checkout and fullfilment.
+            Some of my projects include e-commerce applications such as checkout and fullfilment at TELUS.com.
           </p>
           <p>
             I also enjoy talking about mathematics and finding proofs in logic puzzles
