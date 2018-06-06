@@ -14,7 +14,11 @@ class Songs extends React.Component {
             songData.map((song, i) => {
               return (
                 <SongStyle>
-                  <ImageLoader song={song}/>
+                  <ImageLoader src={song.imgSrc} alt={song.title}>
+                    <span> { song.title } </span>
+                    <span> { song.artist } </span>
+                    <span> { song.year } </span>
+                  </ImageLoader>
                 </SongStyle>
               )
             })

@@ -2,8 +2,7 @@ import styled from 'styled-components';
 
 export const ImageLoaderStyle = styled.div`
    .placeholder {
-     background-color: #cacaca;
+     background-color: ${props => props.color};
      height: 150px;
-     border-radius: 10px;
    }
 `;

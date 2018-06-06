@@ -55,9 +55,9 @@ class Home extends React.Component {
           <p>
             Check out some of the <a href="music"> music</a> I listen to.
           </p>
-          {/*<p>
-            Here are some of the <a href="articles"> articles</a> that I have found enlightening.
-          </p> */}
+          <p>
+            I just started keeping a list of <a href="articles"> articles</a> that I have found enlightening.
+          </p>
           {/* <p>
             Here's my <a href="blog"> blog </a>.
           </p> */}
@@ -80,7 +80,7 @@ class Home extends React.Component {
                 kkwoker@gmail.com
               </a>
             </div>
-            <div>Last Updated: April 8th, 2018</div>
+            <div>Last Updated: Jun 5th, 2018</div>
           </ContactStyle>
         </BioStyle>
       </HomeStyle>

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { ImageLoaderStyle } from './Styles';
 
 class ImageLoader extends React.Component {
@@ -12,24 +13,29 @@ class ImageLoader extends React.Component {
   }
 
   render() {
-    const { song } = this.props;
+    const { src, alt, children, color } = this.props;
     const { loaded } = this.state;
     return (
-      <ImageLoaderStyle>
+      <ImageLoaderStyle color={color}>
         <img
           className={`image ${loaded ? 'fade-in' : 'display-none'}`}
           onLoad={this.onLoad.bind(this)}
-          src={song.imgSrc}
-          alt={song.title} />
+          src={src}
+          alt={alt} />
         <div className={`image placeholder ${loaded ? 'display-none' : ''}`} />
-        <div className={`${loaded ? 'fade-in' : 'hidden'}`}>
-          <span> { song.title } </span>
-          <span> { song.artist } </span>
-          <span> { song.year } </span>
-        </div>
+          { children }
       </ImageLoaderStyle>
     )
   }
 }
+
+ImageLoader.propTypes = {
+  src: PropTypes.string,
+  alt: PropTypes.string,
+  children: PropTypes.node,
+
+  // The color of the preloading background
+  color: PropTypes.color
+};
 
 export default ImageLoader;
