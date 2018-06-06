@@ -55,9 +55,23 @@ class Home extends React.Component {
           <p>
             Check out some of the <a href="music"> music</a> I listen to.
           </p>
+          {/*<p>
+            Here are some of the <a href="articles"> articles</a> that I have found enlightening.
+          </p> */}
           {/* <p>
             Here's my <a href="blog"> blog </a>.
           </p> */}
+
+          <br />
+
+          <h4> Current enthusiasms </h4>
+          <p> <strong> Jun 5th, 2018: </strong> <a href="/blog/haskell-as-a-functional-programming-language">Haskell as a functional programming language</a> </p>
+          <p> <strong> May 11th, 2018: </strong> What does Data Science mean? </p>
+          <p> <strong> April 20th, 2018: </strong> Recognizing NP complete problems </p>
+          <p> <strong> March 15th, 2018: </strong> Network Flows in algorithm design </p>
+          <p> <strong> Feb 27th, 2018: </strong> Dynamic Programming fundamentals </p>
+          <p> <strong> Nov 7th, 2018: </strong> Graph theory </p>
+          <p> <strong> Sept 30th, 2018: </strong> Counting and problem solving </p>
 
           <ContactStyle>
             <div>
