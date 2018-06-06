@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { media } from '../../style-utils';
 
 export const BlogListStyle = styled.div`

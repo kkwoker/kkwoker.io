@@ -6,6 +6,7 @@ import BlogPost from '../pages/BlogPost';
 import Songs from '../pages/Songs';
 import Map from '../pages/Map';
 import NotFound from '../pages/NotFound';
+import BingoPage from '../pages/BingoPage';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
@@ -36,6 +37,9 @@ class App extends Component {
                 )} />
                 <Route exact={true} path='/blog/*' render={() => (
                   <BlogPost />
+                )} />
+                <Route exact={true} path='/bingo' render={() => (
+                  <BingoPage />
                 )} />
                 <Route exact={true} path='*' render={() => (
                   <NotFound />
