@@ -21,6 +21,7 @@ export const AppStyle = styled.div`
 export const AppContainerStyle = styled.div`
   display: flex;
   justify-content: center;
+  font-family: AvenirNextCondensed-DemiBold;
 
   ${ media.mediumUp`
     margin-right: 100px;

@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactRotatingText from 'react-rotating-text';
 import {
   BioStyle,
   HomeStyle,
@@ -6,7 +7,17 @@ import {
   ContactStyle
 } from './Styles';
 
-const kinnanFilteredImg = 'https://pbs.twimg.com/profile_images/983127371497615361/d6CPdT72_400x400.jpg';
+// const kinnanFilteredImg = 'https://pbs.twimg.com/profile_images/983127371497615361/d6CPdT72_400x400.jpg';
+// LinkedIn Image
+// const kinnanFilteredImg = 'https://media.licdn.com/dms/image/C5603AQHJViVa0KerDA/profile-displayphoto-shrink_200_200/0?e=1553731200&v=beta&t=siKdKam2LlDLQVe714Mrdk4H6mtXaOdVtYrxgyBABWA';
+//<img
+//  className={`profile-image ${loadedImg ? 'fade-in' : 'display-none'}`}
+//  src={kinnanFilteredImg}
+//  alt='profile of Kinnan Kwok'
+//  onLoad={this.onLoad.bind(this)} />
+//<div className={`profile-image ${loadedImg ? 'display-none' : ''}`}>
+//  <div className='loader' />
+//</div>
 
 class Home extends React.Component {
 
@@ -21,22 +32,29 @@ class Home extends React.Component {
 
   render() {
     const { loadedImg } = this.state;
+    const roles = [
+      'Software Developer',
+      'Technical Writer',
+      'Machine Learning Enthusiast',
+      'Computer Scientist'
+    ];
     return (
       <HomeStyle>
         <HeaderCardStyle>
-          <img
-            className={`profile-image ${loadedImg ? 'fade-in' : 'display-none'}`}
-            src={kinnanFilteredImg}
-            alt='profile of Kinnan Kwok'
-            onLoad={this.onLoad.bind(this)} />
-          <div className={`profile-image ${loadedImg ? 'display-none' : ''}`}>
-            <div className='loader' />
+          <div>
+            <h1> KINNAN KWOK </h1>
+            <h2>
+              <ReactRotatingText
+                items={roles}
+                cursor={true}
+                deletingInterval={10}
+                typingInterval={10}
+                emptyPause={100}
+                pause={5000}
+              />
+            </h2>
           </div>
 
-          <div>
-            <h1> Kinnan Kwok </h1>
-            <h2> Software Developer </h2>
-          </div>
         </HeaderCardStyle>
         <BioStyle>
           <p>
@@ -46,7 +64,13 @@ class Home extends React.Component {
             Some of my projects include e-commerce applications such as checkout and fullfilment at TELUS.com.
           </p>
           <p>
-            I also enjoy talking about mathematics and finding proofs in logic puzzles
+            We built a neural net music synthesizer and showcased it at SFU.
+          </p>
+          <p>
+            Here is my <a href="resume"> resume </a>.
+          </p>
+          <p>
+            I also enjoy talking about mathematics and finding proofs in logic puzzles.
           </p>
           <p>
             Outside of work, I enjoy hiking, climbing, and snowboarding.
@@ -79,7 +103,7 @@ class Home extends React.Component {
                 kkwoker@gmail.com
               </a>
             </div>
-            <div>Last Updated: Jun 5th, 2018</div>
+            <div>Last Updated: Jan 21st, 2019</div>
           </ContactStyle>
         </BioStyle>
       </HomeStyle>

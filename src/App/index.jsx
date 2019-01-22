@@ -7,6 +7,7 @@ import Songs from '../pages/Songs';
 import Map from '../pages/Map';
 import NotFound from '../pages/NotFound';
 import BingoPage from '../pages/BingoPage';
+import ResumePage from '../pages/ResumePage';
 import Articles from '../pages/Articles';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
@@ -44,6 +45,9 @@ class App extends Component {
                 )} />
                 <Route exact={true} path='/articles' render={() => (
                   <Articles />
+                )} />
+                <Route exact={true} path='/resume' render={() => (
+                  <ResumePage />
                 )} />
                 <Route exact={true} path='*' render={() => (
                   <NotFound />

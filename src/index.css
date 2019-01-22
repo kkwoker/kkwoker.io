@@ -24,6 +24,21 @@ body {
   margin: 0;
   padding: 15px;
   font-family: sans-serif;
+  background-color: #202328;
+  color: #f2f2f2;
+}
+
+a:link {
+  color: #53a8fc;
+}
+a:visited {
+  color: #1187fc;
+}
+a:hover {
+  color: hotpink;
+}
+a:active {
+  color: #df00ef;
 }
 
 .hidden {
