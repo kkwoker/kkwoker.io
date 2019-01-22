@@ -19,16 +19,16 @@ class App extends Component {
           <AppContainerStyle>
             <div className="App">
               <Switch>
-                <Route exact={true} path='/' render={() => (
+                <Route exact path='/' render={() => (
                   <Home />
                 )} />
-                <Route exact={true} path='/music' render={() => (
+                <Route exact path='/music' render={() => (
                   <Songs />
                 )} />
-                <Route exact={true} path='/blog' render={() => (
+                <Route exact path='/blog' render={() => (
                   <Blog />
                 )} />
-                <Route exact={true} path='/vancouver' render={() => (
+                <Route exact path='/vancouver' render={() => (
                   <Map
                     isMarkerShown
                     googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
@@ -37,19 +37,19 @@ class App extends Component {
                     mapElement={<div style={{ height: `100%` }} />}
                   />
                 )} />
-                <Route exact={true} path='/blog/*' render={() => (
+                <Route exact path='/blog/*' render={() => (
                   <BlogPost />
                 )} />
-                <Route exact={true} path='/bingo' render={() => (
+                <Route exact path='/bingo' render={() => (
                   <BingoPage />
                 )} />
-                <Route exact={true} path='/articles' render={() => (
+                <Route exact path='/articles' render={() => (
                   <Articles />
                 )} />
-                <Route exact={true} path='/resume' render={() => (
+                <Route exact path='/resume' render={() => (
                   <ResumePage />
                 )} />
-                <Route exact={true} path='*' render={() => (
+                <Route exact path='*' render={() => (
                   <NotFound />
                 )} />
               </Switch>

@@ -1,5 +1,7 @@
-s3_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
-s3_secret: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+
+# Omitting s3_id will fall back to reading ~/.aws/credentials
+#s3_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+#s3_secret: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
 s3_bucket: kkwoker.io
 cloudfront_distribution_id: E231FZRN9HMXN0
 

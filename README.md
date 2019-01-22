@@ -6,7 +6,9 @@ yarn run-when-changed --watch src/posts/2018-04-11_algorithms-cheat-sheet.md --e
 
 ## Deployment
 
+Ensure you have AWS credentials in ~/.aws/credentials
+
 ```
 $ yarn run build
-$ s3cmd push
+$ s3_website push
 ```
