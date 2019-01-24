@@ -49,6 +49,22 @@ class App extends Component {
                 <Route exact path='/resume' render={() => (
                   <ResumePage />
                 )} />
+                <Route exact path='/checkout-demo' render={() => (
+                  <div>
+                    <h1> Demo instructions: </h1>
+                    <ol> 1. Go to <a target="_blank" href='https://www.telus.com/en/bc/shop/home/'> telus.com/shop/home </a> </ol>
+                    <ol> 2. Choose some items to add to the cart </ol>
+                    <ol> 3. Enter in an address "768 Seymour St" and "10d" as the unit number </ol>
+                    <ol> 4. Proceed into Review Cart </ol>
+                    <ol> 5. View cart details and checkout! </ol>
+                    <ol> 6. Be amazed at the work accomplished. </ol>
+
+                    <h2> Cleaner demo instructions coming soon!</h2>
+                    <div>
+                      <a href='/'> Home </a>
+                    </div>
+                  </div>
+                )} />
                 <Route exact path='*' render={() => (
                   <NotFound />
                 )} />

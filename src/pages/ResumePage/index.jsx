@@ -17,21 +17,22 @@ class ResumePage extends React.Component {
         <BioStyle>
           <h2> SKILLSET </h2>
           <li>
-            Web development: JavaScript, CSS, HTML, React, Redux
+            Data Science: python, nltk, numpy, pandas, spark, big data
+          </li>
+          <li>
+            Machine Learning: TensorFlow, Keras, Neural Nets, classification, regressions, Bayes Inference
+          </li>
+          <li>
+            Web Development: JavaScript, CSS, HTML, React, Redux
           </li>
           <li>
             DevOps: AWS, GCP, Continuous Integration
           </li>
           <li>
-            Data Science: python, nltk, numpy, pandas, spark, big data
-          </li>
-          <li>
-            Machine Learning: TensorFlow, Keras, Neural Nets, classification, regressions
-          </li>
-          <li>
-            Work process: agile, kanban, scrum, story writing, technical writing
+            Work process: agile, kanban, story writing, technical writing, documentation
           </li>
 
+          <br />
 
           <h2> WORK HISTORY </h2>
           <li>
@@ -41,18 +42,42 @@ class ResumePage extends React.Component {
             DevOps - TELUS Digital - 2014
           </li>
 
+          <br />
+
           <h2> PROJECTS </h2>
           <li>
-            Neural network music synthesizer
+            <a target='_blank' href='/robot-music.pdf'> Neural network music synthesizer
+              (writeup and demo coming soon!)</a>
           </li>
           <li>
-            Unified Checkout
+            <a target='_blank' href='TODO'> MovieLens Dataset exploration </a>
           </li>
+          <li>
+            <a href='/checkout-demo'> Unified Checkout </a>
+          </li>
+
+          <br />
 
           <h2> EDUCATION </h2>
           <li>
-            Simon Fraser University - Bachors of Computing Science w/ concetrantion in AI. GPA: 3.3
+            Simon Fraser University - Bachelor's of Computing Science concentrating in AI. GPA: 3.3
+            <ul>
+              <li>
+                CMPT 353 - Data Science
+              </li>
+              <li>
+                CMPT 726 - Machine Learning
+              </li>
+              <li>
+                CMPT 825 - Natural Language Processing
+              </li>
+              <li>
+                CMPT 412 - Computer Vision
+              </li>
+            </ul>
           </li>
+
+          <br />
 
           <h2> HOBBIES </h2>
           <li>
@@ -60,6 +85,9 @@ class ResumePage extends React.Component {
           </li>
           <li>
             dabbling in electronic music
+          </li>
+          <li>
+            posting <a target='_blank' href='https://www.instagram.com/kwookrr/?hl=en'> semi artistic photos </a>
           </li>
 
           <br />

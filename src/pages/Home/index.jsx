@@ -35,8 +35,9 @@ class Home extends React.Component {
     const roles = [
       'Software Developer',
       'Technical Writer',
+      'Computer Scientist',
       'Machine Learning Enthusiast',
-      'Computer Scientist'
+      'Data Scientist'
     ];
     return (
       <HomeStyle>
@@ -65,9 +66,10 @@ class Home extends React.Component {
           </p>
           <p>
             We built a neural net music synthesizer and showcased it at SFU.
+            <a target="_blank" href="/robot-music.pdf"> Poster here</a>. Demo and writeup coming soon.
           </p>
           <p>
-            Here is my <a href="resume"> resume </a>.
+            Here is my <a href="resume"> resume</a>.
           </p>
           <p>
             I also enjoy talking about mathematics and finding proofs in logic puzzles.
@@ -76,11 +78,12 @@ class Home extends React.Component {
             Outside of work, I enjoy hiking, climbing, and snowboarding.
           </p>
           <p>
-            Check out some of the <a href="music"> music</a> I listen to.
+            Check out some of the <a href="music"> music</a> I listen to. This list is outdated, but checkout the
+            placeholder loading and fancy grid!
           </p>
-          <p>
+          {/*<p>
             I just started a list of <a href="articles"> articles</a> that I have found enlightening.
-          </p>
+          </p> */}
           {/* <p>
             Here's my <a href="blog"> blog </a>.
           </p> */}
