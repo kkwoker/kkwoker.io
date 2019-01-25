@@ -65,8 +65,11 @@ class Home extends React.Component {
             Some of my projects include e-commerce applications such as checkout and fullfilment at TELUS.com.
           </p>
           <p>
-            We built a neural net music synthesizer and showcased it at SFU.
-            <a target="_blank" href="/robot-music.pdf"> Poster here</a>. Demo and writeup coming soon.
+            We built a neural net music synthesizer and showcased it at SFU. <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href='http://kkwoker.io/robot-music.pdf'>Poster here
+            </a>. Demo and writeup coming soon!
           </p>
           <p>
             Here is my <a href="resume"> resume</a>.
