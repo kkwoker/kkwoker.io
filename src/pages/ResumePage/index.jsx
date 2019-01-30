@@ -2,8 +2,7 @@ import React from 'react';
 import {
   BioStyle,
   HomeStyle,
-  HeaderCardStyle,
-  ContactStyle
+  HeaderCardStyle
 } from '../Home/Styles';
 
 class ResumePage extends React.Component {
@@ -125,7 +124,7 @@ class ResumePage extends React.Component {
             dabbling in electronic music
           </li>
           <li>
-            posting <a target='_blank' href='https://www.instagram.com/kwookrr/?hl=en'> semi artistic photos </a>
+            posting <a target='_blank' rel='noopener noreferrer' href='https://www.instagram.com/kwookrr/?hl=en'> semi artistic photos </a>
           </li>
 
           <br />

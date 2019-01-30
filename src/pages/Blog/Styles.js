@@ -19,4 +19,15 @@ export const BlogListStyle = styled.div`
      color: inherit;
      text-decoration: inherit;
    }
+
+   a:visited {
+     color: #c4c2c4;
+   }
+
+   a:hover {
+     color: hotpink;
+   }
+   a:active {
+     color: #df00ef;
+   }
 `;

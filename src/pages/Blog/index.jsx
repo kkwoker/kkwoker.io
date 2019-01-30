@@ -9,24 +9,32 @@ const publishedPosts = posts
   .reverse();
 
 class Blog extends React.Component {
+
+  blogList() {
+    return publishedPosts.map(post =>
+      <a href={`blog/${post.routeKey}`} key={post.routeKey}>
+        <div className='blog-item'>
+          <div>{ post.title }</div>
+          <sub>{ new Date(post.date).toDateString() }</sub>
+        </div>
+      </a>
+    );
+  }
+
   render() {
     return (
       <div>
-        <h1>Blog.</h1>
-        <h2>More coming soon...</h2>
+        <h1> Blog. </h1>
+        <h2> A simple space for quick jots... </h2>
 
         <BlogListStyle>
-          { publishedPosts.map(post =>
-            <a href={`blog/${post.routeKey}`} key={post.routeKey}>
-              <div className='blog-item'>
-                <div>{ post.title }</div>
-                <sub>{ new Date(post.date).toDateString() }</sub>
-              </div>
-            </a>
-          )}
+          { this.blogList() }
         </BlogListStyle>
 
-        <a href='/'>Return home</a>
+        <br />
+        <div>
+          <a href='/'> Return home </a>
+        </div>
       </div>
     );
   }

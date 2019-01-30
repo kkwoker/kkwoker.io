@@ -8,4 +8,18 @@ export const BodyContentStyle = styled.div`
   ${ media.mediumUp`
     width: 700px;
   `}
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  a:hover {
+    color: hotpink;
+    text-decoration: underline;
+
+  }
+  a:active {
+    color: #df00ef;
+  }
 `

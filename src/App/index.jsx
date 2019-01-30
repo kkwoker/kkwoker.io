@@ -8,8 +8,10 @@ import Map from '../pages/Map';
 import NotFound from '../pages/NotFound';
 import BingoPage from '../pages/BingoPage';
 import ResumePage from '../pages/ResumePage';
+import SocialPage from '../pages/SocialPage';
 import Articles from '../pages/Articles';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import TableOfContents from '../components/TableOfContents';
 
 class App extends Component {
   render() {
@@ -49,10 +51,13 @@ class App extends Component {
                 <Route exact path='/resume' render={() => (
                   <ResumePage />
                 )} />
+                <Route exact path='/home' render={() => (
+                  <SocialPage />
+                )} />
                 <Route exact path='/checkout-demo' render={() => (
                   <div>
                     <h1> Demo instructions: </h1>
-                    <ol> 1. Go to <a target="_blank" href='https://www.telus.com/en/bc/shop/home/'> telus.com/shop/home </a> </ol>
+                    <ol> 1. Go to <a target="_blank" rel='noopener noreferrer' href='https://www.telus.com/en/bc/shop/home/'> telus.com/shop/home </a> </ol>
                     <ol> 2. Choose some items to add to the cart </ol>
                     <ol> 3. Enter in an address "768 Seymour St" and "10d" as the unit number </ol>
                     <ol> 4. Proceed into Review Cart </ol>
@@ -70,6 +75,7 @@ class App extends Component {
                 )} />
               </Switch>
             </div>
+            <Route path={'/home'} component={TableOfContents} />
           </AppContainerStyle>
         </BrowserRouter>
       </AppStyle>

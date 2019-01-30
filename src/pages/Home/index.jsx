@@ -20,18 +20,7 @@ import {
 //</div>
 
 class Home extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = { loadedImg: false }
-  }
-
-  onLoad(e) {
-    this.setState({ loadedImg: true })
-  }
-
   render() {
-    const { loadedImg } = this.state;
     const roles = [
       'Software Developer',
       'Technical Writer',
