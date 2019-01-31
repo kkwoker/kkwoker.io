@@ -9,8 +9,9 @@ export const TableOfContentsDiv = styled.div`
   }
 
   display: none;
+  list-style-type: none;
 
-  ${ media.msmallUp`
+  ${ media.mediumUp`
     display: inherit;
   `}
 

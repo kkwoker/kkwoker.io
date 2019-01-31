@@ -27,6 +27,7 @@ export const BlogListStyle = styled.div`
    a:hover {
      color: hotpink;
    }
+
    a:active {
      color: #df00ef;
    }

@@ -4,6 +4,7 @@
 //
 
 // Sticky
+// TODO: Make the position to be in the right position
 
 import React from 'react';
 import PropTypes from 'prop-types';

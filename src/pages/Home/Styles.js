@@ -37,6 +37,12 @@ export const BioStyle = styled.div`
   ${ media.mediumUp`
     max-width: 700px;
   `}
+
+  .enter-link {
+    text-align: center;
+    font-size: 2em;
+    text-decoration: underline;
+  }
 `;
 
 export const HomeStyle = styled.div`

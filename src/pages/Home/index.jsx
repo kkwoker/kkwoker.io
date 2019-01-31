@@ -80,6 +80,8 @@ class Home extends React.Component {
             Here's my <a href="blog"> blog </a>.
           </p> */}
 
+          <div className='enter-link'><a href='/home'> ~ENTER~ </a></div>
+
           <br />
 
           {/* <h4> Current enthusiasms </h4>
