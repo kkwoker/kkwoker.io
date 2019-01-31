@@ -26,7 +26,7 @@ class SocialPage extends React.PureComponent {
         <div className='divider'>...</div>
         <br />
         <a href={`blog/${post.routeKey}`} key={post.routeKey}>
-          <h2> { post.title } </h2>
+          <h2 id={post.routeKey}> { post.title } </h2>
           <ImageStyle>
             {
               (post.imageSrc) ?

@@ -11,16 +11,22 @@ import PropTypes from 'prop-types';
 import {
   TableOfContentsDiv
 } from './Styles';
+import posts from '../../assets/posts';
+
+// Not the best way of doing this...
+const publishedPosts = posts
+  .filter(post => post.draft === false)
+  .sort(post => post.date)
+  .reverse();
 
 class TableOfContents extends React.Component {
 
   render() {
-    const headings = ['Heading 1', 'Heading 2', 'Heading 3'];
     return (
       <TableOfContentsDiv>
         <div className='sticky'>
-          { headings.map(heading =>
-            <li> { heading } </li>
+          { publishedPosts.map(post =>
+            <a href={`#${post.routeKey}`}><li> { post.title } </li></a>
           )}
         </div>
       </TableOfContentsDiv>

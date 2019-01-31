@@ -28,7 +28,7 @@ export const SocialPageDiv = styled.div`
   }
 
   .home-link {
-    margin-left: 20px;
+    text-align: center;
   }
 `;
 
@@ -54,7 +54,6 @@ export const ContentStyle = styled.div`
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-    width: 400px;
     height: 105px;
     overflow: hidden;
   }
