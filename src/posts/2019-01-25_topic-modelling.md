@@ -1,10 +1,18 @@
 ---
 routeKey: "brief-notes-on-lda-nmf"
 title: "Brief Notes: Topic Modelling with LDA and NMF"
+imageSrc: "https://fr.mathworks.com/help/examples/textanalytics/win64/FitLDAModelExample_01.png"
 date: 2019-01-25
 tags: [data science, machine learning]
 draft: false
 ---
+
+Topic modelling is a method to extract grouping information from a set of text
+documents. The topics that are generated are representative of the set
+of documents. Two approaches are typically used: Latent Dirichlet
+Allocation (LDA) and Non-negative Matrix Factorization. This article
+will introduce and examine these two topics.
+
 
 [Topic Modelling](#topic-modelling)
 -----------------------------------

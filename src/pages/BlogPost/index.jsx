@@ -6,6 +6,7 @@ import posts from '../../assets/posts.json';
 
 class BlogPost extends React.Component {
 
+  // TODO: Examine if passing post.html into this component would work better.
   findPost() {
     const { pathname } = this.context.router.history.location;
     const postRoute = pathname.split('/')[2];
@@ -14,22 +15,23 @@ class BlogPost extends React.Component {
 
   render() {
 
-    const renderedPost = this.findPost();
+    const post = this.findPost();
 
-    if (!renderedPost) {
+    if (!post) {
       return <NotFound />
     }
 
     return (
       <div>
-        <h1>{ renderedPost.title }</h1>
-        <h2>{ renderedPost.subtitle }</h2>
-        <sub>{ new Date(renderedPost.date).toDateString() }</sub>
+        <h1>{ post.title }</h1>
+        <h2>{ post.subtitle }</h2>
+        <sub>{ new Date(post.date).toDateString() }</sub>
         <BodyContentStyle>
-          <div dangerouslySetInnerHTML={{__html: renderedPost.html}} />
+          { post.imageSrc && <img src={post.imageSrc} alt={post.imageAlt} /> }
+          <div dangerouslySetInnerHTML={{__html: post.html}} />
         </BodyContentStyle>
         <div>
-          <a href='/blog'>Back to blog list</a>
+          <a href='/home'>Back to blog list</a>
         </div>
       </div>
     )

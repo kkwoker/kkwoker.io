@@ -9,17 +9,23 @@ export const BodyContentStyle = styled.div`
     width: 700px;
   `}
 
-  a {
+  h2 a {
     color: inherit;
     text-decoration: inherit;
   }
 
-  a:hover {
+  h2 a:hover {
     color: hotpink;
     text-decoration: underline;
 
   }
-  a:active {
+
+  h2 a:active {
     color: #df00ef;
+  }
+
+  img {
+    max-width: 400px;
+    background-color: white;
   }
 `

@@ -10,50 +10,44 @@ import {
   ContentStyle,
   SocialPageDiv
 } from './Styles';
+import posts from '../../assets/posts';
 
-const catImage = 'https://media.altpress.com/uploads/2018/07/Hello_Kitty.jpg';
-
-// This blog post array could be merged with the BlogPost array
-const blogs = [
-  {
-    heading: 'Introducing Baxter the Cat!',
-    imageSrc: catImage,
-    imageAlt: 'hellokitty',
-    content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-  }
-];
+// Not the best way of doing this...
+const publishedPosts = posts
+  .filter(post => post.draft === false)
+  .sort(post => post.date)
+  .reverse();
 
 class SocialPage extends React.PureComponent {
 
   postPreviews() {
-    return blogs.map(post => (
+    return publishedPosts.map(post =>
       <div>
         <div className='divider'>...</div>
-        <a href=''>
-          <h2> { post.heading } </h2>
+        <br />
+        <a href={`blog/${post.routeKey}`} key={post.routeKey}>
+          <h2> { post.title } </h2>
           <ImageStyle>
-            <ImageLoader src={post.imageSrc} alt={post.imageAlt} />
+            {
+              (post.imageSrc) ?
+                <ImageLoader src={post.imageSrc} alt={post.imageAlt} /> :
+                <div className='image' />
+            }
           </ImageStyle>
           <ContentStyle>
-            <p> { post.content } </p>
-            <div>...Continue reading</div>
+            <sub> { new Date(post.date).toDateString() } </sub>
+            <div className='overflow-ellipsis' dangerouslySetInnerHTML={{__html: post.html}} />
           </ContentStyle>
         </a>
       </div>
-    ));
+    );
   }
 
   render() {
     return (
       <SocialPageDiv>
         <BlogPostsList>
-
           { this.postPreviews() }
-          { this.postPreviews() }
-          { this.postPreviews() }
-          { this.postPreviews() }
-          { this.postPreviews() }
-
         </BlogPostsList>
         <br />
         <div className='home-link'>

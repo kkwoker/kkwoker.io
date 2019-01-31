@@ -1,12 +1,16 @@
 ---
 routeKey: "algorithms-cheat-sheet"
 title: "Algorithms Cheat Sheet"
+imageSrc: "https://upload.wikimedia.org/wikipedia/en/4/41/Clrs3.jpeg"
 date: 2018-04-11
 tags: [mathematics, algorithms]
 draft: false
 ---
 
-##### This list is not extensive nor is it _entirely_ accurate. Just the main facts needed for basic analysis
+This is a cheatsheet for my CMPT307 - Algorithms and Data Structures
+class. In this class, we learn about Greedy Algorithms, Dynamic
+Programming, Graph Algorithms and NP completeness.
+
 
 [Useful Summation Series](https://www.math.uh.edu/~ilya/class/useful_summations.pdf)
 

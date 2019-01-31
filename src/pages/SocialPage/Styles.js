@@ -38,6 +38,8 @@ export const ImageStyle = styled.div`
     width: 400px;
     height: 200px;
     object-fit: cover;
+
+    background-color: grey;
   }
 
 `;
@@ -48,12 +50,12 @@ export const ContentStyle = styled.div`
   // For ellipsis overflow after N lines
   // Each line is 22px. Height needs to be N * 22px;
   // NOTE: something is using relative fonts. Calculations not correct.
-  p {
+  .overflow-ellipsis {
     display: -webkit-box;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     width: 400px;
-    height: 110px;
+    height: 105px;
     overflow: hidden;
   }
 
