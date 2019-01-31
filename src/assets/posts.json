@@ -69,7 +69,7 @@
       "machine learning"
     ],
     "draft": false,
-    "html": "<p>Blah</p>\n"
+    "html": "<p>TODO</p>\n"
   },
   {
     "routeKey": "baxter-the-kitty",
@@ -82,6 +82,18 @@
     ],
     "draft": false,
     "html": "<p>This little kitty is 6 months old when I got him.\nHis full name is Alabaster, but I named him Baxter for short.\nBaxter loves cuddling and playing with his rainbow sparkler stick.\nIn his free time, Baxter likes to take naps, jump on tables, and plays\nwith his scratching post.</p>\n"
+  },
+  {
+    "routeKey": "technical-writing-tips",
+    "title": "Tips on Technical Writing",
+    "imageSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8TKBimDOmomh-UGjZz8TihRDWxwIbo_7NiJbmSGInBeHSExCK",
+    "imageAlt": "",
+    "date": "2019-01-30T00:00:00.000Z",
+    "tags": [
+      "writing"
+    ],
+    "draft": false,
+    "html": "<p>“Comedy writers seek the funniest results, horror writers strive for the scariest, and technical writers aim for the clearest. In technical writing, clarity takes precedence over all other rules.”</p>\n<ul>\n<li>Lisa and Betsy&#39;s tech writing workshop</li>\n</ul>\n<p>Technical writing is</p>\n"
   },
   {
     "html": "<p>January 29th</p>\n<p>World champ Backgammon\nDigit Recognition 99.26% accuracy</p>\n<p>neurons behave like logic gates, but with continuous values</p>\n<p>linear weighted input in the neural net</p>\n<p>in_j is input.</p>\n<p>a_j is the output, but it is called activation</p>\n<p>activation function is some nonliear function. like sigmoid</p>\n<p>Sigmoid, now is not so good.\nRadial basis function\nGaussian function --&gt; at any point we measure the distance from two\npoints.</p>\n<p>Rectified Linear Unit --&gt; useful for deep learning.</p>\n<p>For XOR, even if we have multiple hidden units, since we have linear activation\nfunctions, we cannot solve the XOR problem.</p>\n<p>Now given the sigmoid activation functions, it is able to solve it.</p>\n<p>Neural net is performing a function composition\ntwo opposite facing sigmoids is a ridge.</p>\n<p>two ridges make a bump.</p>\n<p>The first two neurons make the ridges, the next layer makes the bump.</p>\n<p>Two hidden units. Visualize the dark is strong weights, light is less\nweight.</p>\n<p>common trick is to add noise to input to force neural net to learn to be\nrobust. Learn the features that are important, not the ones that are in\nthe background.</p>\n<p>Image analysis tasks.</p>\n<p>CNN\nfeature visualization of vonc net trained on ImageNet.</p>\n<p>low level feature -&gt; mid level feature -&gt; high level feature</p>\n<p>even the high level features are somewhat hard to interpret.\nend is a trainable classifier. give me a label.</p>\n<p>Measuring training error.</p>\n<p>parametrer optimizationg</p>\n<p>error function is super non convex.</p>\n<p>no closed form --&gt; use gradient descent.</p>\n<p>What is the derivative of my last output wrt to a weight in the begin.</p>\n<p>Credit assignment problem in AI. Which weight is responsible. How much\nis each weight responsible to the output?</p>\n<p>Back propagation.\nlook at weights connected to output nodes.</p>\n<p>How wrong is the output of the hidden units?\nChange the weight that feeds into this hidden unit.</p>\n<p>Output node, you can see how wrong you are. But how do you see how wrong\nhidden nodes are?\n--&gt; Back propagation....</p>\n<p>For output node k with activation a_k = g(in_k)</p>\n<p>g&#39;(in_k)(t_k - a_k)</p>\n<p>g&#39; is the derivative of error wrt in_i</p>\n<p>Theory: backpropagation <em>implements</em> gradient descent.</p>\n<p>correctness proof for backprop.</p>\n<p>in_j = a_i * w_ij\nd(in_j)/d(w_ij) = a_i</p>\n<p>d(in_j)/d(a_i) = w_ij</p>\n<p>d(in_j)/d(in_i) = deriv wrt in_i of g(in_i) <em> w_ij = d(in_j)/d(a_i) </em> d(a_i)/d(in_i) = w_ij * g&#39;(in_i)</p>\n<p>Show that\n-dE_n/w_ij = del[j] * a_i</p>\n<p>del[j] is the error of the output node j</p>\n<p>theorem\nfor each node j, we have del[j] = -dE_n/in_j\nshow this equality.</p>\n<p>-d(E_n)/d(w_ij) = -d(E_n)/d(in_j) <em> d(in_j)/d(w_ij) = del[j] </em> a_i</p>\n<p>if we can prove this, then we can show that back propagation is equal to\ngradient descent.</p>\n<p>backward induction. claim is true for output nodes. --&gt; show this?</p>\n<p>del[k] === g&#39;(in_k)(t_k - a_k)</p>\n<p>del[k] = 1/2(t_k - a_k)^2\nd</p>\n"
