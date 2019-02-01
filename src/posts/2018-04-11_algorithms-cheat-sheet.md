@@ -4,7 +4,7 @@ title: "Algorithms Cheat Sheet"
 imageSrc: "https://upload.wikimedia.org/wikipedia/en/4/41/Clrs3.jpeg"
 date: 2018-04-11
 tags: [mathematics, algorithms]
-draft: false
+draft: true
 ---
 
 This is a cheatsheet for my CMPT307 - Algorithms and Data Structures

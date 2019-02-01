@@ -31,7 +31,7 @@ class SocialPage extends React.PureComponent {
             {
               (post.imageSrc) ?
                 <ImageLoader src={post.imageSrc} alt={post.imageAlt} /> :
-                <div className='image' />
+                <div className='image'>{post.imageFiller}</div>
             }
           </ImageStyle>
           <ContentStyle>

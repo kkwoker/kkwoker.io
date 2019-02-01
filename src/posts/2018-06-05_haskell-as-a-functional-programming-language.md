@@ -4,7 +4,7 @@ title: "Haskell as a Functional Programming Language"
 imageSrc: "https://www.fpcomplete.com/hubfs/haskell_logo.svg?t=1539735814409"
 date: 2018-06-05
 tags: [programming]
-draft: false
+draft: true
 ---
 
 Haskell is a purely functional programming language. You can't say

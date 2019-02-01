@@ -22,6 +22,13 @@ const definitions = [
     definition: `
       Is a type of linear classification. TODO: Need to review this.
       Error function is a sum of the miss-classified examples.`
+  },
+  {
+    phrase: 'Credit Assignment Problem',
+    definition: `
+      Locating the node or weight that is responsible for the results of the output
+      layer.
+      `
   }
 ];
 

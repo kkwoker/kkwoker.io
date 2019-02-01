@@ -5,7 +5,7 @@ imageSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8TKBimDOmomh-U
 imageAlt: ""
 date: 2019-01-30
 tags: [writing]
-draft: false
+draft: true
 ---
 
 “Comedy writers seek the funniest results, horror writers strive for the scariest, and technical writers aim for the clearest. In technical writing, clarity takes precedence over all other rules.”

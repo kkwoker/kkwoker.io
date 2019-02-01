@@ -4,7 +4,7 @@ title: "Brief Notes: Topic Modelling with LDA and NMF"
 imageSrc: "https://fr.mathworks.com/help/examples/textanalytics/win64/FitLDAModelExample_01.png"
 date: 2019-01-25
 tags: [data science, machine learning]
-draft: false
+draft: true
 ---
 
 Topic modelling is a method to extract grouping information from a set of text

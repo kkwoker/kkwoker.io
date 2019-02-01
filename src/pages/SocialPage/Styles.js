@@ -40,6 +40,11 @@ export const ImageStyle = styled.div`
     object-fit: cover;
 
     background-color: grey;
+
+    //display: table-cell;
+    //text-align: center;
+    //vertical-align: middle;
+    //font-size: 70px;
   }
 
 `;
