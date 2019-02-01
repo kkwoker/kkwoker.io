@@ -14,13 +14,13 @@ export const media = {
   `,
 
   msmallUp: (...args) => css`
-    @media (min-width: 470px) {
+    @media (min-width: 471px) {
       ${ css(...args) }
     }
   `,
 
   smallUp: (...args) => css`
-    @media (min-width: 320px) {
+    @media (min-width: 321px) {
       ${ css(...args) }
     }
   `

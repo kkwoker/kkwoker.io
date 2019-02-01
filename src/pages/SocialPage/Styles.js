@@ -14,6 +14,14 @@ export const BlogPostsList = styled.div`
   }
 `;
 
+export const BlogPost = styled.div`
+  margin-left: 30px;
+  margin-right: 40px;
+  ${ media.msmallUp`
+    margin: 0;
+  `}
+`;
+
 export const SocialPageDiv = styled.div`
   h2 {
     margin-left: 20px;
@@ -35,9 +43,12 @@ export const SocialPageDiv = styled.div`
 
 export const ImageStyle = styled.div`
   .image {
-    width: 400px;
+    width: 340px;
     height: 200px;
     object-fit: cover;
+    ${ media.smallUp`
+      width: 400px;
+    `}
 
     background-color: grey;
 

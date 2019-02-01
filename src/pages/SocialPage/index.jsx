@@ -8,7 +8,8 @@ import {
   BlogPostsList,
   ImageStyle,
   ContentStyle,
-  SocialPageDiv
+  SocialPageDiv,
+  BlogPost
 } from './Styles';
 import posts from '../../assets/posts';
 
@@ -22,7 +23,7 @@ class SocialPage extends React.PureComponent {
 
   postPreviews() {
     return publishedPosts.map(post =>
-      <div>
+      <BlogPost>
         <div className='divider'>...</div>
         <br />
         <a href={`blog/${post.routeKey}`} key={post.routeKey}>
@@ -39,7 +40,7 @@ class SocialPage extends React.PureComponent {
             <div className='overflow-ellipsis' dangerouslySetInnerHTML={{__html: post.html}} />
           </ContentStyle>
         </a>
-      </div>
+      </BlogPost>
     );
   }
 
