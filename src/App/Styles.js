@@ -4,7 +4,8 @@ import { media } from '../style-utils';
 export const AppStyle = styled.div`
   h1 {
     margin-bottom: 10px;
-    ${ media.mediumUp`
+
+    ${ media.msmallUp`
       font-size: 65px;
     `}
   }
@@ -26,5 +27,17 @@ export const AppContainerStyle = styled.div`
   ${ media.mediumUp`
     margin-right: 100px;
     margin-left: 100px;
+
+    justify-content: flex-end;
   `}
+
+  .App {
+    width: 320px;
+    ${ media.msmallUp`
+      width: 470px;
+    `}
+    ${ media.mediumUp`
+      width: 700px;
+    `}
+  }
 `;

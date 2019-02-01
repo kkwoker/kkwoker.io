@@ -14,7 +14,6 @@ const spin = keyframes`
 export const HeaderCardStyle = styled.div`
   display: flex;
   max-width: 400px;
-  margin: auto;
 
   ${ media.mediumUp`
     margin: inherit;

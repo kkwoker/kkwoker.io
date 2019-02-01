@@ -20,7 +20,6 @@ export const TableOfContentsDiv = styled.div`
   ${ media.mediumUp`
     display: inherit;
     margin-top: 200px;
-    margin-left: 30px;
   `}
 
 `;

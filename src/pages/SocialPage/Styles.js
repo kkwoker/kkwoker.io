@@ -15,16 +15,12 @@ export const BlogPostsList = styled.div`
 `;
 
 export const BlogPost = styled.div`
-  margin-left: 30px;
-  margin-right: 40px;
-  ${ media.msmallUp`
-    margin: 0;
-  `}
 `;
 
 export const SocialPageDiv = styled.div`
   h2 {
-    margin-left: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
     ${ media.msmallUp`
       margin: 0;
     `}
@@ -43,12 +39,12 @@ export const SocialPageDiv = styled.div`
 
 export const ImageStyle = styled.div`
   .image {
-    width: 340px;
+    width: 320px;
     height: 200px;
-    object-fit: cover;
-    ${ media.smallUp`
+    ${ media.msmallUp`
       width: 400px;
     `}
+    object-fit: cover;
 
     background-color: grey;
 
@@ -62,6 +58,8 @@ export const ImageStyle = styled.div`
 
 export const ContentStyle = styled.div`
   text-align: justify;
+  padding-right: 10px;
+  padding-left: 10px;
 
   // For ellipsis overflow after N lines
   // Each line is 22px. Height needs to be N * 22px;
@@ -73,9 +71,6 @@ export const ContentStyle = styled.div`
     height: 105px;
     overflow: hidden;
   }
-
-  padding-left: 20px;
-  padding-right: 20px;
 
   ${ media.msmallUp`
     padding: 0;
