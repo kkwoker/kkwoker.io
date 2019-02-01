@@ -28,7 +28,6 @@ export const AppContainerStyle = styled.div`
     margin-right: 100px;
     margin-left: 100px;
 
-    justify-content: flex-end;
   `}
 
   .App {

@@ -1,8 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { BodyContentStyle } from './Styles';
 import NotFound from '../NotFound';
+import ImageLoader from '../../components/ImageLoader';
 import posts from '../../assets/posts.json';
+import {
+  BlogPostStyle,
+  BodyContentStyle,
+  ImageStyle
+} from './Styles';
 
 class BlogPost extends React.Component {
 
@@ -22,18 +27,23 @@ class BlogPost extends React.Component {
     }
 
     return (
-      <div>
+      <BlogPostStyle>
         <h1>{ post.title }</h1>
         <h2>{ post.subtitle }</h2>
         <sub>{ new Date(post.date).toDateString() }</sub>
+        { post.imageSrc &&
+            <ImageLoader
+              styleComponent={ImageStyle}
+              src={post.imageSrc}
+              alt={post.imageAlt} />
+        }
         <BodyContentStyle>
-          { post.imageSrc && <img src={post.imageSrc} alt={post.imageAlt} /> }
           <div dangerouslySetInnerHTML={{__html: post.html}} />
         </BodyContentStyle>
         <div>
           <a href='/home'>Back to blog list</a>
         </div>
-      </div>
+      </BlogPostStyle>
     )
   }
 }

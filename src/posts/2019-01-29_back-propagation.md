@@ -85,7 +85,12 @@ where $k_i$ are the nodes that receive input from $j$
 
 $$
 \frac{\partial E_n}{in_j} = \sum_k\frac{\partial E_n}{in_k}\frac{\partial in_k}{in_j} \\
-= \sum_k\Delta_k\frac{\partial in_k}{in_j} = \sum_k\Delta_kw_{jk}g'(in_j) = \Delta_j
+$$
+$$
+= \sum_k\Delta_k\frac{\partial in_k}{in_j}
+$$
+$$
+= \sum_k\Delta_kw_{jk}g'(in_j) = \Delta_j
 $$
 The last equality is from the definition from eq (1).
 

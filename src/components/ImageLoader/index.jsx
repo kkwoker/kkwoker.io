@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ImageLoaderStyle } from './Styles';
+import { ImageLoaderStyle, DefaultImageStyle } from './Styles';
 
 class ImageLoader extends React.Component {
   constructor(props) {
@@ -13,20 +13,27 @@ class ImageLoader extends React.Component {
   }
 
   render() {
-    const { src, alt, children, color } = this.props;
+    const { src, alt, children, placeholderColor } = this.props;
     const { loaded } = this.state;
+
     return (
-      <ImageLoaderStyle color={color}>
-        <img
-          className={`image ${loaded ? 'fade-in' : 'display-none'}`}
-          onLoad={this.onLoad.bind(this)}
-          src={src}
-          alt={alt} />
-        <div className={`image placeholder ${loaded ? 'display-none' : ''}`} />
-          { children }
+      <ImageLoaderStyle color={placeholderColor}>
+        <this.props.styleComponent>
+          <img className={`image ${loaded ? 'fade-in' : 'display-none'}`}
+            onLoad={this.onLoad.bind(this)}
+            src={src}
+            alt={alt} />
+          <div className={`image placeholder ${loaded ? 'display-none' : ''}`} />
+            { children }
+        </this.props.styleComponent>
       </ImageLoaderStyle>
     )
   }
+}
+
+ImageLoader.defaultProps = {
+  styleComponent: DefaultImageStyle,
+  placeholderColor: 'grey'
 }
 
 ImageLoader.propTypes = {
@@ -34,8 +41,12 @@ ImageLoader.propTypes = {
   alt: PropTypes.string,
   children: PropTypes.node,
 
+  // styleComponent is used to determine the size of the placeholder image.
+  // styleComponent is a style-component class that renders the responsive size css
+  styleComponent: PropTypes.ReactNode,
+
   // The color of the preloading background
-  color: PropTypes.color
+  placeholderColor: PropTypes.string
 };
 
 export default ImageLoader;

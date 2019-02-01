@@ -23,18 +23,19 @@ class SocialPage extends React.PureComponent {
 
   postPreviews() {
     return publishedPosts.map(post =>
-      <BlogPost>
+      <BlogPost key={post.routeKey}>
         <div className='divider'>...</div>
         <br />
         <a href={`blog/${post.routeKey}`} key={post.routeKey}>
           <h2 id={post.routeKey}> { post.title } </h2>
-          <ImageStyle>
-            {
-              (post.imageSrc) ?
-                <ImageLoader src={post.imageSrc} alt={post.imageAlt} /> :
-                <div className='image'>{post.imageFiller}</div>
-            }
-          </ImageStyle>
+          {
+            (post.imageSrc) ?
+              <ImageLoader
+                styleComponent={ImageStyle}
+                src={post.imageSrc}
+                alt={post.imageAlt} /> :
+              <div className='image'>{post.imageFiller}</div>
+          }
           <ContentStyle>
             <sub> { new Date(post.date).toDateString() } </sub>
             <div className='overflow-ellipsis' dangerouslySetInnerHTML={{__html: post.html}} />
