@@ -23,6 +23,7 @@ export const SocialPageDiv = styled.div`
     padding-left: 10px;
     ${ media.msmallUp`
       margin: 0;
+      padding-left: 0;
     `}
   }
 
