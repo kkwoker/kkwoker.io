@@ -66,10 +66,12 @@ class Home extends React.Component {
           <p>
             Here is my <a href="resume"> resume</a>.
           </p>
-          <div className='enter-link'><a href='/blog'> ~ENTER BLOG~ </a></div>
 
-          <br />
-          <br />
+          <a href='/blog'>
+            <button className='enter-link' type='button'>
+              <span> ~ENTER BLOG~ </span>
+            </button>
+          </a>
 
           {/* <h4> Current enthusiasms </h4>
           <p> <strong> Jun 5th, 2018: </strong> <a href="/blog/haskell-as-a-functional-programming-language">Haskell as a functional programming language</a> </p>

@@ -71,7 +71,7 @@ class App extends Component {
                 )} />
               </Switch>
             </div>
-            <Route path={'/blog'} component={TableOfContents} />
+            <Route exact path={'/blog'} component={TableOfContents} />
           </AppContainerStyle>
         </BrowserRouter>
       </AppStyle>

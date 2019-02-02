@@ -48,7 +48,7 @@ export const BodyContentStyle = styled.div`
   `}
   margin-left: 10px;
   margin-right: 10px;
-  font-family: Tahoma;
+  font-family: Tahoma, sans-serif;
 
   ${ media.mediumUp`
     width: 700px;

@@ -45,6 +45,73 @@ export const BioStyle = styled.div`
 `;
 
 export const HomeStyle = styled.div`
+
+  .enter-link {
+    border: 1px solid #303030;
+    background-color: #202020
+    border-radius: 35px;
+
+    outline: none;
+    cursor: pointer;
+
+    font-family: inherit;
+    color: inherit;
+    width: 100%;
+
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    transition: background-color .3s;
+
+    :hover, :focus {
+      background-color: #1a1a1a;
+    }
+
+    :before {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      display: block;
+      width: 0;
+      padding-top: 0;
+
+      border-radius: 100%;
+
+      background-color: #232323;
+      //background-color: rgba(20, 20, 20, .3);
+
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    :active:before {
+      width: 120%;
+      padding-top: 120%;
+
+      transition: width .2s ease-out, padding-top .2s ease-out;
+    }
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    ${ media.mediumUp`
+      padding-top: 60px;
+      padding-bottom: 70px;
+    `}
+  }
+
+  .enter-link > * {
+    position: relative;
+  }
+
+
+  max-width: 500px;
+
   .fade-in {
     display: 'inherit';
     animation-name: ${fadeIn};
@@ -85,9 +152,7 @@ export const HomeStyle = styled.div`
 `;
 
 export const ContactStyle = styled.div`
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 15px;
-
+  margin-top: 15px;
+  padding-bottom: 25px;
   font-size: 12px;
 `;
