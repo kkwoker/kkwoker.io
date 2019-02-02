@@ -17,11 +17,11 @@ export const BlogPostsList = styled.div`
 export const BlogPost = styled.div`
 `;
 
-export const SocialPageDiv = styled.div`
+export const BlogPageDiv = styled.div`
   h2 {
     padding-right: 10px;
     padding-left: 10px;
-    ${ media.msmallUp`
+    ${ media.smallUp`
       margin: 0;
       padding-left: 0;
     `}
@@ -61,6 +61,9 @@ export const ContentStyle = styled.div`
   text-align: justify;
   padding-right: 10px;
   padding-left: 10px;
+  ${ media.smallUp`
+    padding: 0;
+  `}
 
   // For ellipsis overflow after N lines
   // Each line is 22px. Height needs to be N * 22px;

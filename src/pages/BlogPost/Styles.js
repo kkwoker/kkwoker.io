@@ -9,6 +9,17 @@ export const BlogPostStyle = styled.div`
     display: block;
     margin-left: 10px;
   }
+
+  img {
+    max-width: 320px;
+    background-color: white;
+    ${ media.msmallUp`
+      max-width: 400px;
+    `}
+    ${ media.mediumUp`
+      min-width: 700px;
+    `}
+  }
 `;
 
 export const ImageStyle = styled.div`

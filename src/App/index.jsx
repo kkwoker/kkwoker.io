@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { AppStyle, AppContainerStyle } from './Styles';
 import Home from '../pages/Home';
-import Blog from '../pages/Blog';
 import BlogPost from '../pages/BlogPost';
 import Songs from '../pages/Songs';
 import Map from '../pages/Map';
 import NotFound from '../pages/NotFound';
 import BingoPage from '../pages/BingoPage';
 import ResumePage from '../pages/ResumePage';
-import SocialPage from '../pages/SocialPage';
+import BlogPage from '../pages/BlogPage';
 import Articles from '../pages/Articles';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import TableOfContents from '../components/TableOfContents';
@@ -26,9 +25,6 @@ class App extends Component {
                 )} />
                 <Route exact path='/music' render={() => (
                   <Songs />
-                )} />
-                <Route exact path='/blog' render={() => (
-                  <Blog />
                 )} />
                 <Route exact path='/vancouver' render={() => (
                   <Map
@@ -51,8 +47,8 @@ class App extends Component {
                 <Route exact path='/resume' render={() => (
                   <ResumePage />
                 )} />
-                <Route exact path='/home' render={() => (
-                  <SocialPage />
+                <Route exact path='/blog' render={() => (
+                  <BlogPage />
                 )} />
                 <Route exact path='/checkout-demo' render={() => (
                   <div>
@@ -75,7 +71,7 @@ class App extends Component {
                 )} />
               </Switch>
             </div>
-            <Route path={'/home'} component={TableOfContents} />
+            <Route path={'/blog'} component={TableOfContents} />
           </AppContainerStyle>
         </BrowserRouter>
       </AppStyle>

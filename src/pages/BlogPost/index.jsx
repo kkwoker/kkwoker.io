@@ -41,7 +41,7 @@ class BlogPost extends React.Component {
           <div dangerouslySetInnerHTML={{__html: post.html}} />
         </BodyContentStyle>
         <div>
-          <a href='/home'>Back to blog list</a>
+          <a href='/blog'>Back to blog list</a>
         </div>
       </BlogPostStyle>
     )

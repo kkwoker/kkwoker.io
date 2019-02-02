@@ -126,10 +126,19 @@ class ResumePage extends React.Component {
           <li>
             posting <a target='_blank' rel='noopener noreferrer' href='https://www.instagram.com/kwookrr/?hl=en'> semi artistic photos </a>
           </li>
-
           <br />
-
+          <sub>
+            View a PDF version <a
+              href='https://docs.google.com/document/d/12v6yrexY-UX9REkKMs-o4tWqZFf5YdoI4R5Nz8M2L0k/edit?usp=sharing'
+              rel='noopener noreferrer'
+              target='_blank'
+              > here</a>.
+          </sub>
         </BioStyle>
+
+        <div className='home-link'>
+          <a href='/'> Return home </a>
+        </div>
       </HomeStyle>
     )
   }

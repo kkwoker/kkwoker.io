@@ -8,7 +8,7 @@ import {
   BlogPostsList,
   ImageStyle,
   ContentStyle,
-  SocialPageDiv,
+  BlogPageDiv,
   BlogPost
 } from './Styles';
 import posts from '../../assets/posts';
@@ -19,7 +19,7 @@ const publishedPosts = posts
   .sort(post => post.date)
   .reverse();
 
-class SocialPage extends React.PureComponent {
+class BlogPage extends React.PureComponent {
 
   postPreviews() {
     return publishedPosts.map(post =>
@@ -47,7 +47,7 @@ class SocialPage extends React.PureComponent {
 
   render() {
     return (
-      <SocialPageDiv>
+      <BlogPageDiv>
         <BlogPostsList>
           { this.postPreviews() }
         </BlogPostsList>
@@ -55,9 +55,9 @@ class SocialPage extends React.PureComponent {
         <div className='home-link'>
           <a href='/'> Return home </a>
         </div>
-      </SocialPageDiv>
+      </BlogPageDiv>
     )
   }
 }
 
-export default SocialPage;
+export default BlogPage;

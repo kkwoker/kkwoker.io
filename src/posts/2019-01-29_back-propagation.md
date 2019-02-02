@@ -11,18 +11,19 @@ draft: false
 
 Backpropagation is an efficient method for computing error derivatives
 for every node in a neural network. But why does this method work? We
-know that gradient descent is used to find local minimums and if we can
-show that Backpropagation is just gradient descent for neural networks,
-then we can show that backpropagation works!
+know that gradient descent is used to find local minimums in a linear
+classifier, so if we can show that Backpropagation is equivalent to gradient descent for neural networks,
+then we can show that backpropagation can also find local minimums!
 
 Algorithm for backpropagation:
 
 1. Calculate derivatives for weights connecting to the output layer
    nodes.
-2. In one layer previous to the output layer, calculate error derivatives
-   of nodes by using the errors of the weights calculated in step 1
-3. Repeat this process of calculating derivatives until we reach the
-   input nodes
+2. In the layer previous to the output layer, calculate error derivatives
+   of these nodes by using the errors of the weights calculated in the
+   output layer.
+3. Repeat this process of calculating derivatives for all further layers until we reach the
+   input layer.
 
 This is what's meant by propagating the output error signal backwards
 through the network.
@@ -33,7 +34,7 @@ Notation
 - $x_n$ : training example $n$
 - $a_i$ : activation of node $i$
 - $in_k$ : input of node $k$
-- $w_{ik}$ : weight on edge from node $i$> to node $k$
+- $w_{ik}$ : weight on edge from node $i$ to node $k$
 - $g(.)$ : activation function
 - $t_k$ : target value
 - $\Delta_k$ : the error signal at node $k$

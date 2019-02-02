@@ -20,6 +20,12 @@ export const media = {
   `,
 
   smallUp: (...args) => css`
+    @media (min-width: 375px) {
+      ${ css(...args) }
+    }
+  `,
+
+  xsmallUp: (...args) => css`
     @media (min-width: 321px) {
       ${ css(...args) }
     }

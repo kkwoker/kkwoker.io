@@ -20,13 +20,12 @@ const publishedPosts = posts
   .reverse();
 
 class TableOfContents extends React.Component {
-
   render() {
     return (
       <TableOfContentsDiv>
         <div className='sticky'>
           { publishedPosts.map(post =>
-            <a href={`#${post.routeKey}`}><li> { post.title } </li></a>
+            <a key={post.routeKey} href={`#${post.routeKey}`}><li> { post.title } </li></a>
           )}
         </div>
       </TableOfContentsDiv>

@@ -44,17 +44,20 @@ class Home extends React.Component {
               />
             </h2>
           </div>
-
         </HeaderCardStyle>
+
         <BioStyle>
           <p>
             I am a computer science student at SFU and a software developer at TELUS digital.
           </p>
           <p>
-            Some of my projects include e-commerce applications such as checkout and fullfilment at TELUS.com.
+            My primary interests are in Deep Learning, Software Engineering and Technical Writing.
           </p>
           <p>
-            We built a neural net music synthesizer and showcased it at SFU. <a
+            Some of my current projects include e-commerce applications such as checkout and fullfilment at TELUS.com.
+          </p>
+          <p>
+            I built a neural net music synthesizer and showcased it at SFU. <a
               target='_blank'
               rel='noopener noreferrer'
               href='http://kkwoker.io/robot-music.pdf'>Poster here
@@ -63,25 +66,9 @@ class Home extends React.Component {
           <p>
             Here is my <a href="resume"> resume</a>.
           </p>
-          <p>
-            I also enjoy talking about mathematics and finding proofs in logic puzzles.
-          </p>
-          <p>
-            Outside of work, I enjoy hiking, climbing, and snowboarding.
-          </p>
-          <p>
-            Check out some of the <a href="music"> music</a> I listen to. This list is outdated, but checkout the
-            placeholder loading and fancy grid!
-          </p>
-          {/*<p>
-            I just started a list of <a href="articles"> articles</a> that I have found enlightening.
-          </p> */}
-          {/* <p>
-            Here's my <a href="blog"> blog </a>.
-          </p> */}
+          <div className='enter-link'><a href='/blog'> ~ENTER BLOG~ </a></div>
 
-          <div className='enter-link'><a href='/home'> ~ENTER~ </a></div>
-
+          <br />
           <br />
 
           {/* <h4> Current enthusiasms </h4>
@@ -95,12 +82,16 @@ class Home extends React.Component {
 
           <ContactStyle>
             <div>
-              Contact me at&nbsp;
+              Interested in chatting? Contact me at&nbsp;
               <a href="mailto:kkwoker@gmail.com">
                 kkwoker@gmail.com
               </a>
             </div>
-            <div>Last Updated: Jan 21st, 2019</div>
+            <div>See a bug? File an issue <a
+                href='https://github.com/kkwoker/kkwoker.io'>here</a>!
+            </div>
+            <div> Last Updated: Feb 1st, 2019 </div>
+            <div> Built with ReactJS and <span role='img' aria-label='heart'>❤️ </span> </div>
           </ContactStyle>
         </BioStyle>
       </HomeStyle>
