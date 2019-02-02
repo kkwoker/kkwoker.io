@@ -56,7 +56,9 @@ export const HomeStyle = styled.div`
 
     font-family: inherit;
     color: inherit;
-    width: 100%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
 
     position: relative;
     overflow: hidden;
@@ -110,7 +112,7 @@ export const HomeStyle = styled.div`
   }
 
 
-  max-width: 500px;
+  max-width: 700px;
 
   .fade-in {
     display: 'inherit';
