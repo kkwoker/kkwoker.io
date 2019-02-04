@@ -9,9 +9,15 @@ class ResumePage extends React.Component {
   render() {
     return (
       <HomeStyle>
+        <sub>
+          View a printable PDF version <a
+            href='http://kkwoker.io/Kinnan Kwok Resume.pdf'
+            rel='noopener noreferrer'
+            target='_blank'
+            > here</a>.
+        </sub>
         <HeaderCardStyle>
           <h1> KINNAN KWOK </h1>
-
         </HeaderCardStyle>
         <BioStyle>
           <h2> SKILLSET </h2>
@@ -88,6 +94,14 @@ class ResumePage extends React.Component {
             </a>
           </li>
           <li>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://github.com/kkwoker/simple-blockchain'>
+              Simple Blockchain
+            </a>
+          </li>
+          <li>
             <a href='/checkout-demo'> Unified Checkout </a>
           </li>
 
@@ -98,19 +112,19 @@ class ResumePage extends React.Component {
             Simon Fraser University - Bachelor's of Computing Science concentrating in AI. GPA: 3.3
             <ul>
               <h3> Software Development </h3>
-              <li> CMPT 275 - Software Engineering - Java</li>
-              <li> CMPT 383 - Programming Languages - Functional and Concurrent programming in Haskell and GoLang </li>
+              <li> CMPT 275 - Software Engineering - Java, team dynamics, OOP</li>
+              <li> CMPT 383 - Programming Languages - Functional and concurrent programming in Haskell and GoLang </li>
               <li> CMPT 354 - Database Systems - SQL, NoSQL, clustering, database management </li>
               <li> CMPT 300 - Operating Systems - Kernels, processes, unix, threads, parallel computing </li>
-              <li> CMPT 307 - Data Structures + Algorithms - Greedy algs, dynamic programming, graph algs, network flows</li>
+              <li> CMPT 307 - Data Structures and Algorithms - Greedy algoritms, dynamic programming, graph algorithms, network flows</li>
 
               <h3> Artificial Intelligence </h3>
-              <li> CMPT 310 - Artificial Intellgience Survey - AI algorithms and general problems</li>
-              <li> CMPT 353 - Data Science - Python, numpy, pandas, matplotlib, inference stats, big data </li>
-              <li> CMPT 412 - Computer Vision - Convolutional nets, facial detection, photometric stereo, object tracking</li>
-              <li> CMPT 726 - Machine Learning - Bayesian Inference, Neural Nets, PyTorch, Logistic Regressions, Classification</li>
+              <li> CMPT 310 - Artificial Intelligence Survey - AI algorithms and general problems</li>
+              <li> CMPT 353 - Data Science - Python, numpy, pandas, matplotlib, inference, big data </li>
+              <li> CMPT 412 - Computer Vision - Convolutional nets, facial detection, photometric stereo, object tracking, SIFT</li>
+              <li> CMPT 726 - Machine Learning - Bayesian Inference, Neural Networks, PyTorch, logistic regressions, classification</li>
               <li> CMPT 825 - Natural Language Processing - Language models, translation, grammars, topic modelling</li>
-              <li> CMPT 880 - Deep Learning - Neural Nets </li>
+              <li> CMPT 880 - Deep Learning - Neural networks </li>
             </ul>
           </li>
 
@@ -127,13 +141,6 @@ class ResumePage extends React.Component {
             posting <a target='_blank' rel='noopener noreferrer' href='https://www.instagram.com/kwookrr/?hl=en'> semi artistic photos </a>
           </li>
           <br />
-          <sub>
-            View a PDF version <a
-              href='https://docs.google.com/document/d/12v6yrexY-UX9REkKMs-o4tWqZFf5YdoI4R5Nz8M2L0k/edit?usp=sharing'
-              rel='noopener noreferrer'
-              target='_blank'
-              > here</a>.
-          </sub>
         </BioStyle>
 
         <div className='home-link'>
