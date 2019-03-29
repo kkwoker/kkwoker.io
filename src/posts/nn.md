@@ -129,3 +129,15 @@ large, the other would be large too, codependent.
 when we add the regularization term, we say it's not so important to
 train the error term.  increasing regularization takes more time to
 converge since it doesnt look at error as much as before.
+
+equivalence of SVM and ANN
+
+
+each hidden node is a support vector
+
+
+
+we have a function, we want to approx with nn
+
+
+
