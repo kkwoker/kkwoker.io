@@ -11,25 +11,15 @@ const spin = keyframes`
   100% { transform: rotate(360deg); }
 `;
 
-export const HeaderCardStyle = styled.div`
-  display: flex;
-  max-width: 400px;
-
-  ${ media.mediumUp`
-    margin: inherit;
-    max-width: inherit;
-  `}
-`;
-
 export const BioStyle = styled.div`
-  //border: #88aeff6e;
+  /* //border: #88aeff6e;
   //border-width: 2px;
   //border-style: solid;
   //border-radius: 10px;
-  //padding: 10px 30px;
+  //padding: 10px 30px; */
   padding-bottom: 70px;
 
-  //box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  /* //box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); */
 
   position: relative;
 
@@ -153,8 +143,11 @@ export const HomeStyle = styled.div`
   }
 `;
 
-export const ContactStyle = styled.div`
-  margin-top: 15px;
-  padding-bottom: 25px;
+export const Footer = styled.div`
+  bottom: 0;
+  width: 100%
+  padding: 1rem;
+  //#margin-top: 15px;
+  //#padding-bottom: 25px;
   font-size: 12px;
 `;

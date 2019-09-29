@@ -3,6 +3,7 @@ import { media } from '../../style-utils';
 
 export const BlogPostsList = styled.div`
   max-width: 400px;
+  font-family: Roboto;
 
   a {
     color: inherit;
@@ -12,6 +13,11 @@ export const BlogPostsList = styled.div`
   a:active {
     color: hotpink;
   }
+`;
+
+export const PostTitle = styled.h2`
+  font-family: 'Source Serif Pro', serif;
+  font-weight: normal;
 `;
 
 export const BlogPost = styled.div`
@@ -47,7 +53,7 @@ export const ImageStyle = styled.div`
     `}
     object-fit: cover;
 
-    background-color: grey;
+    background-color: inherit;
 
     //display: table-cell;
     //text-align: center;
@@ -80,4 +86,3 @@ export const ContentStyle = styled.div`
     padding: 0;
   `}
 `;
-

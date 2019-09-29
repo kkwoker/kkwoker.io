@@ -4,16 +4,13 @@ import WebGL from '../../components/WebGL';
 import {
   HomeStyle,
   Footer,
-} from './Styles';
+} from '../Home/Styles';
 
-class Home extends React.Component {
+class ContactPage extends React.Component {
   render() {
     return (
       <HomeStyle>
         <Header />
-
-        <br />
-        <WebGL />
 
         <Footer>
           <div>
@@ -33,4 +30,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default ContactPage;

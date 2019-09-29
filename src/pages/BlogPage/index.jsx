@@ -1,15 +1,15 @@
 // The Social Page is intended as an infinite scroll social media posting, all about ME.
 
 import React from 'react';
-import InfiniteScroll from 'react-infinite-scroller';
 import ImageLoader from '../../components/ImageLoader';
-import TableOfContents from '../../components/TableOfContents';
+import Header from '../../components/Header';
 import {
   BlogPostsList,
   ImageStyle,
   ContentStyle,
   BlogPageDiv,
-  BlogPost
+  BlogPost,
+  PostTitle,
 } from './Styles';
 import posts from '../../assets/posts';
 
@@ -27,15 +27,18 @@ class BlogPage extends React.PureComponent {
         <div className='divider'>...</div>
         <br />
         <a href={`blog/${post.routeKey}`} key={post.routeKey}>
-          <h2 id={post.routeKey}> { post.title } </h2>
           {
             (post.imageSrc) ?
               <ImageLoader
+                id={post.routeKey}
                 styleComponent={ImageStyle}
                 src={post.imageSrc}
                 alt={post.imageAlt} /> :
-              <div className='image'>{post.imageFiller}</div>
+              <div id={post.routeKey} className='image'>{post.imageFiller}</div>
           }
+          <br />
+          <PostTitle> { post.title } </PostTitle>
+          <br />
           <ContentStyle>
             <sub> { new Date(post.date).toDateString() } </sub>
             <div className='overflow-ellipsis' dangerouslySetInnerHTML={{__html: post.html}} />
@@ -47,7 +50,14 @@ class BlogPage extends React.PureComponent {
 
   render() {
     return (
+      <div> 
+        <Header />
+        Coming soon! 
+      </div>
+    )
+    return (
       <BlogPageDiv>
+        <Header />
         <BlogPostsList>
           { this.postPreviews() }
         </BlogPostsList>

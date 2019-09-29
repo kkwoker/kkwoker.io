@@ -5,7 +5,7 @@ imageSrc: "https://www.electronicdesign.com/sites/electronicdesign.com/files/sty
 imageAlt: ""
 date: 2019-01-29
 tags: [machine learning]
-draft: false
+draft: true
 ---
 
 
@@ -97,8 +97,3 @@ The last equality is from the definition from eq (1).
 
 Through induction, this proof can be realized.
 Therefore, backpropagation is gradient descent!
-
-
-
-
-

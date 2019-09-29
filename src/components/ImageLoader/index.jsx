@@ -13,13 +13,14 @@ class ImageLoader extends React.Component {
   }
 
   render() {
-    const { src, alt, children, placeholderColor } = this.props;
+    const { src, alt, children, placeholderColor, id } = this.props;
     const { loaded } = this.state;
 
     return (
       <ImageLoaderStyle color={placeholderColor}>
         <this.props.styleComponent>
           <img className={`image ${loaded ? 'fade-in' : 'display-none'}`}
+            id={id}
             onLoad={this.onLoad.bind(this)}
             src={src}
             alt={alt} />

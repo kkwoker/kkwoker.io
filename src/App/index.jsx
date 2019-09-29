@@ -8,6 +8,7 @@ import NotFound from '../pages/NotFound';
 import BingoPage from '../pages/BingoPage';
 import ResumePage from '../pages/ResumePage';
 import BlogPage from '../pages/BlogPage';
+import ContactPage from '../pages/ContactPage';
 import Articles from '../pages/Articles';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import TableOfContents from '../components/TableOfContents';
@@ -50,6 +51,9 @@ class App extends Component {
                 <Route exact path='/blog' render={() => (
                   <BlogPage />
                 )} />
+                <Route exact path='/contact' render={() => (
+                  <ContactPage />
+                )} />
                 <Route exact path='/checkout-demo' render={() => (
                   <div>
                     <h1> Demo instructions: </h1>
@@ -71,7 +75,7 @@ class App extends Component {
                 )} />
               </Switch>
             </div>
-            <Route exact path={'/blog'} component={TableOfContents} />
+            {/*<Route exact path={'/blog'} component={TableOfContents} />*/}
           </AppContainerStyle>
         </BrowserRouter>
       </AppStyle>

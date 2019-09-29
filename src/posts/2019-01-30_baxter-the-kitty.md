@@ -1,6 +1,6 @@
 ---
 routeKey: "baxter-the-kitty"
-title: "Introducing Baxter the Kitty!"
+title: "Baxter, the cat."
 imageSrc: "/images/baxter.JPG"
 imageAlt: "Hi Baxter!"
 date: 2019-01-30
@@ -15,4 +15,3 @@ In his free time, Baxter likes to take naps, jump on tables, and plays
 with his scratching post.
 
 I am super excited to have him join our family!
-
