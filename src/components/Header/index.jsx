@@ -1,13 +1,14 @@
-import React from 'react';
+import React from 'react'
 import {
   NavBar,
   NavLink,
   HeaderCardStyle,
-  HeaderStyle
-} from './Styles';
+  HeaderStyle,
+  NavButton
+} from './Styles'
 
 class Header extends React.Component {
-  render() {
+  render () {
     return (
       <HeaderStyle>
         <HeaderCardStyle>
@@ -17,14 +18,21 @@ class Header extends React.Component {
         </HeaderCardStyle>
 
         <NavBar>
-          <NavLink href='/'> Home </NavLink>
-          {/*<NavLink href='/blog'> Blog </NavLink>*/}
-          <NavLink href='/resume'> Resume </NavLink>
-          {/*<NavLink href='/contact'> Contact </NavLink>*/}
+          <NavButton>
+            <NavLink href='/'> Home </NavLink>
+          </NavButton>
+
+          {/* <NavLink href='/blog'> Blog </NavLink> */}
+
+          <NavButton>
+            <NavLink href='/resume'> Resume </NavLink>
+          </NavButton>
+
+          {/* <NavLink href='/contact'> Contact </NavLink> */}
         </NavBar>
       </HeaderStyle>
-    );
+    )
   }
 }
 
-export default Header;
+export default Header
