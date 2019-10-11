@@ -23,6 +23,9 @@ class Header extends React.Component {
           </NavButton>
 
           {/* <NavLink href='/blog'> Blog </NavLink> */}
+          <NavButton>
+            <NavLink href='/ramblings'> Ramblings </NavLink>
+          </NavButton>
 
           <NavButton>
             <NavLink href='/resume'> Resume </NavLink>

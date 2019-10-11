@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { media } from '../../style-utils'
 
 export const HeaderStyle = styled.div`
-
+  font-family: AvenirNextCondensed-DemiBold;
 `
 
 export const NavBar = styled.div`

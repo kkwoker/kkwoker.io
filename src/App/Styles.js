@@ -1,11 +1,11 @@
-import styled from 'styled-components';
-import { media } from '../style-utils';
+import styled from 'styled-components'
+import { media } from '../style-utils'
 
 export const AppStyle = styled.div`
   h1 {
     margin-bottom: 10px;
 
-    ${ media.msmallUp`
+    ${media.msmallUp`
       font-size: 65px;
     `}
   }
@@ -13,30 +13,28 @@ export const AppStyle = styled.div`
   h2 {
     font-size: 20px;
     margin-left: 2px;
-    ${ media.mediumUp`
+    ${media.mediumUp`
       font-size: 25px;
     `}
   }
-`;
+`
 
 export const AppContainerStyle = styled.div`
   display: flex;
   justify-content: center;
-  font-family: AvenirNextCondensed-DemiBold;
 
-  ${ media.mediumUp`
+  ${media.mediumUp`
     margin-right: 100px;
     margin-left: 100px;
-
   `}
 
   .App {
     width: 320px;
-    ${ media.msmallUp`
+    ${media.msmallUp`
       width: 470px;
     `}
-    ${ media.mediumUp`
+    ${media.mediumUp`
       width: 700px;
     `}
   }
-`;
+`

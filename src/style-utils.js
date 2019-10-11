@@ -1,33 +1,33 @@
-import { css } from 'styled-components';
+import { css } from 'styled-components'
 
 export const media = {
   largeUp: (...args) => css`
     @media (min-width: 1080px) {
-      ${ css(...args) }
+      ${css(...args)}
     }
   `,
 
   mediumUp: (...args) => css`
     @media (min-width: 768px) {
-      ${ css(...args) }
+      ${css(...args)}
     }
   `,
 
   msmallUp: (...args) => css`
     @media (min-width: 471px) {
-      ${ css(...args) }
+      ${css(...args)}
     }
   `,
 
   smallUp: (...args) => css`
     @media (min-width: 375px) {
-      ${ css(...args) }
+      ${css(...args)}
     }
   `,
 
   xsmallUp: (...args) => css`
     @media (min-width: 321px) {
-      ${ css(...args) }
+      ${css(...args)}
     }
   `
-};
+}

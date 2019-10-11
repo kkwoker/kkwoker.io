@@ -1,29 +1,27 @@
-import styled, { keyframes } from 'styled-components';
-import { media } from '../../style-utils';
+import styled, { keyframes } from 'styled-components'
+import { media } from '../../style-utils'
 
 const fadeIn = keyframes`
   from { opacity: 0; }
   to   { opacity: 1; }
-`;
+`
 
 const spin = keyframes`
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-`;
+`
 
 export const BioStyle = styled.div`
-  /* //border: #88aeff6e;
-  //border-width: 2px;
-  //border-style: solid;
-  //border-radius: 10px;
-  //padding: 10px 30px; */
   padding-bottom: 70px;
 
-  /* //box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); */
+  padding-left: 34px;
+  padding-top: 10px;
+  padding-right: 34px;
+  background-color: #303030;
 
   position: relative;
 
-  ${ media.mediumUp`
+  ${media.mediumUp`
     max-width: 700px;
   `}
 
@@ -32,7 +30,7 @@ export const BioStyle = styled.div`
     font-size: 2em;
     text-decoration: underline;
   }
-`;
+`
 
 export const HomeStyle = styled.div`
 
@@ -91,7 +89,7 @@ export const HomeStyle = styled.div`
     padding-top: 20px;
     padding-bottom: 20px;
 
-    ${ media.mediumUp`
+    ${media.mediumUp`
       padding-top: 60px;
       padding-bottom: 70px;
     `}
@@ -134,14 +132,14 @@ export const HomeStyle = styled.div`
 
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
-    ${ media.mediumUp`
+    ${media.mediumUp`
       margin-top: 10px;
       width: 150px;
       min-width: 150px;
       height: 150px;
     `}
   }
-`;
+`
 
 export const Footer = styled.div`
   bottom: 0;
@@ -150,4 +148,4 @@ export const Footer = styled.div`
   //#margin-top: 15px;
   //#padding-bottom: 25px;
   font-size: 12px;
-`;
+`

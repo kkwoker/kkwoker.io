@@ -1,34 +1,33 @@
-import React from 'react';
+import React from 'react'
 import {
   BioStyle,
-  HomeStyle,
-} from '../Home/Styles';
-import { HeaderCardStyle } from '../../components/Header/Styles';
-import Header from '../../components/Header';
+  HomeStyle
+} from '../Home/Styles'
+import { HeaderCardStyle } from '../../components/Header/Styles'
+import Header from '../../components/Header'
 
 class ResumePage extends React.Component {
-  render() {
+  render () {
     return (
       <HomeStyle>
         <Header />
-        <br />
         <sub>
           View a printable PDF version <a
             href='http://kkwoker.io/Kinnan Kwok Resume.pdf'
             rel='noopener noreferrer'
             target='_blank'
-            > here</a>.
+          > here</a>.
         </sub>
         <BioStyle>
-          <h2> SKILLSET </h2>
+          <h2> Skills </h2>
           <li>
-            Data Science: python, nltk, numpy, pandas, spark, big data
+            Data science: python, nltk, numpy, pandas, spark, big data
           </li>
           <li>
-            Machine Learning: TensorFlow, Keras, Neural Nets, classification, regressions, Bayes Inference
+            Machine learning: TensorFlow, Keras, Neural Nets, classification, regressions, Bayes Inference
           </li>
           <li>
-            Web Development: JavaScript, CSS, HTML, React, Redux
+            Web development: JavaScript, CSS, HTML, React, Redux
           </li>
           <li>
             DevOps: AWS, GCP, Ansible, Terraform, Docker, Continuous Integration
@@ -39,7 +38,7 @@ class ResumePage extends React.Component {
 
           <br />
 
-          <h2> WORK HISTORY </h2>
+          <h2> Work History </h2>
           <li>
             Senior Software Developer - TELUS Digital - Checkout - 2016 - now
             <ul>
@@ -71,7 +70,7 @@ class ResumePage extends React.Component {
 
           <br />
 
-          <h2> PROJECTS </h2>
+          <h2> Past Projects </h2>
           <li>
             <a
               target='_blank'
@@ -130,7 +129,7 @@ class ResumePage extends React.Component {
 
           <br />
 
-          <h2> EDUCATION </h2>
+          <h2> Education </h2>
           <li>
             Simon Fraser University - Bachelor's of Computing Science concentrating in AI. GPA: 3.4
             <ul>
@@ -149,20 +148,6 @@ class ResumePage extends React.Component {
               <li> CMPT 880 - Deep Learning - Neural networks, GANs, VAEs </li>
             </ul>
           </li>
-
-          <br />
-
-          <h2> HOBBIES </h2>
-          <li>
-            exploring mountains on a snowboard
-          </li>
-          <li>
-            dabbling in electronic music
-          </li>
-          <li>
-            posting <a target='_blank' rel='noopener noreferrer' href='https://www.instagram.com/kwookrr/?hl=en'> semi artistic photos </a>
-          </li>
-          <br />
         </BioStyle>
 
         <div className='home-link'>
@@ -173,4 +158,4 @@ class ResumePage extends React.Component {
   }
 }
 
-export default ResumePage;
+export default ResumePage
