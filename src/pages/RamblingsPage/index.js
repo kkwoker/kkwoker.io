@@ -9,6 +9,12 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import CardActionArea from '@material-ui/core/CardActionArea'
 import Chip from '@material-ui/core/Chip'
+import allPosts from '../../assets/posts'
+
+const posts = allPosts
+  .filter(post => post.draft === false)
+  .sort(post => post.date)
+  .reverse()
 
 const useStyles = makeStyles({
   card: {
@@ -56,17 +62,28 @@ const useStyles = makeStyles({
   }
 })
 
+const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
 function CardContainer (props) {
   const classes = useStyles()
+
+  const d = new Date(props.post.date)
+  const date = d.getDate() + 1
+  const month = d.getMonth() + 1
+  const year = d.getFullYear()
+  const fullDate = `${year}-${month}-${date}`
+  const writtenDate = `${days[d.getDay()]}, ${months[d.getMonth()]} ${date}, ${year}`
+
   return (
     <Card className={classes.card}>
       <CardActionArea className={classes.actionArea}>
         <CardContent>
           <Typography className={classes.heading} gutterBottom>
-            Friday, Oct 11, 2019
+            {writtenDate}
           </Typography>
           <Typography variant='h5' component='h2'>
-            {props.title}
+            {props.post.title}
           </Typography>
           <br />
           <br />
@@ -74,12 +91,14 @@ function CardContainer (props) {
       </CardActionArea>
       <CardActions className={classes.action}>
         <div className={classes.root}>
-          <Chip className={classes.chip} size='small' label='Poetry' variant='outlined' />
-          <Chip className={classes.chip} size='small' label='Machine Learning' variant='outlined' />
-          <Chip className={classes.chip} size='small' label='Web' variant='outlined' />
+          {
+            props.post.tags.map(tag => (
+              <Chip className={classes.chip} size='small' label={tag} variant='outlined' />
+            ))
+          }
         </div>
 
-        <Link to={`/scribbles/${props.title.toLowerCase()}`} className={classes.link}>
+        <Link to={`/scribbles/${fullDate}-${props.post.slug.toLowerCase()}`} className={classes.link}>
           <Button className={classes.button}>
           Read more
           </Button>
@@ -95,10 +114,9 @@ export default function RamblingsPage () {
       <Header />
       <h2> Scribbles </h2>
       <div>
-        <CardContainer title='Capitalism' />
-        <CardContainer title='Words' />
-        <CardContainer title='Shape' />
-        <CardContainer title='Computational Learning' />
+        {posts.map(post => (
+          <CardContainer post={post} />
+        ))}
       </div>
     </div>
   )

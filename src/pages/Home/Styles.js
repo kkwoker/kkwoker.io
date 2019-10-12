@@ -140,12 +140,3 @@ export const HomeStyle = styled.div`
     `}
   }
 `
-
-export const Footer = styled.div`
-  bottom: 0;
-  width: 100%
-  padding: 1rem;
-  //#margin-top: 15px;
-  //#padding-bottom: 25px;
-  font-size: 12px;
-`

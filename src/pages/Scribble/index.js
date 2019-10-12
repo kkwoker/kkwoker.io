@@ -1,17 +1,15 @@
 import React from 'react'
 import Header from '../../components/Header'
+import { Link } from 'react-router-dom'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
+import CardActions from '@material-ui/core/CardActions'
+import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import Chip from '@material-ui/core/Chip'
 import { makeStyles } from '@material-ui/core/styles'
-
-const post = {
-  date: '12-10-2019',
-  title: 'Capitalism',
-  body: "Capitalism. It’s all around us. It’s most prominent in big cities. It controls our well being. It capitalizes on every aspect of one's life. Someone out there is profiting from every action you take. You make a meal, the food industry takes a cut. You type on a computer, the technology companies take a cut. You use the bathroom, the water and toiletry companies take a cut. You get paid by your job, the government takes a cut. You lift your arm, the health practitioners take a cut. Everything is connected. It’s a web of trade. It runs our lives. We are continuously enslaved by it. Who deserves these cuts? Which companies deserve our consumerism? We decide. ",
-  tags: ['Poetry', 'Machine', 'Web']
-}
+import posts from '../../assets/posts.json'
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
 
 const useStyles = makeStyles({
   card: {
@@ -34,11 +32,25 @@ const useStyles = makeStyles({
   },
   root: {
     color: '#f2f2f2'
+  },
+  button: {
+    color: '#f2f2f2'
+  },
+  link: {
+    textDecoration: 'none'
+  },
+  action: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding: 0
   }
 })
 
-export default function Scribble () {
+export default function Scribble (props) {
   const classes = useStyles()
+  const postId = props.match.params.id.split('-')[3]
+  const post = posts.find(post => post.slug === postId)
+
   return (
     <div>
       <Header />
@@ -51,14 +63,29 @@ export default function Scribble () {
             Friday, Oct 11, 2019
           </Typography>
           <div className={classes.root}>
-            <Chip className={classes.chip} size='small' label='Poetry' variant='outlined' />
-            <Chip className={classes.chip} size='small' label='Machine Learning' variant='outlined' />
-            <Chip className={classes.chip} size='small' label='Web' variant='outlined' />
+            {
+              post.tags.map(tag => (
+                <Chip
+                  className={classes.chip}
+                  size='small'
+                  label={tag}
+                  variant='outlined'
+                  key={tag} />
+              ))
+            }
           </div>
           <br />
-          <Typography variant='body1'>
-            {post.body}
+          <Typography variant='body1' component='span'>
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
           </Typography>
+          <CardActions className={classes.action}>
+            <Link to='/scribbles' className={classes.link}>
+              <Button className={classes.button}>
+                <ArrowBackIosIcon fontSize='small' />
+                back
+              </Button>
+            </Link>
+          </CardActions>
         </CardContent>
       </Card>
     </div>

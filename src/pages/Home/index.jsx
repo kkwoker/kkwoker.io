@@ -1,35 +1,35 @@
 import React from 'react'
 import Header from '../../components/Header'
 import WebGL from '../../components/WebGL'
+import { makeStyles } from '@material-ui/core/styles'
 import {
-  HomeStyle,
-  Footer
+  HomeStyle
 } from './Styles'
 
-class Home extends React.Component {
-  render () {
-    return (
-      <HomeStyle>
-        <Header />
-
-        <WebGL />
-
-        <Footer>
-          <div>
-            Interested in chatting? Contact me at&nbsp;
-            <a href='mailto:kkwoker@gmail.com'>
-              kkwoker@gmail.com
-            </a>
-          </div>
-          <div>See a bug? File an issue <a
-            href='https://github.com/kkwoker/kkwoker.io'>here</a>!
-          </div>
-          <div> Last Updated: Feb 1st, 2019 </div>
-          <div> Built with ReactJS and <span role='img' aria-label='heart'>❤️ </span> </div>
-        </Footer>
-      </HomeStyle>
-    )
+const useStyles = makeStyles({
+  footer: {
+    marginTop: '10px',
+    fontSize: '12px'
   }
-}
+})
 
-export default Home
+export default function Home () {
+  const classes = useStyles()
+  return (
+    <HomeStyle>
+      <Header />
+
+      <WebGL />
+
+      <div className={classes.footer}>
+        <div>
+            Email me at&nbsp;
+          <a href='mailto:kkwoker@gmail.com'>
+              kkwoker@gmail.com
+          </a>
+        </div>
+        <div> Last Updated: Oct 12th, 2019 </div>
+      </div>
+    </HomeStyle>
+  )
+}

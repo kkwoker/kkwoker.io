@@ -9,7 +9,6 @@ import BingoPage from '../pages/BingoPage'
 import ResumePage from '../pages/ResumePage'
 import BlogPage from '../pages/BlogPage'
 import Scribble from '../pages/Scribble'
-import ContactPage from '../pages/ContactPage'
 import Articles from '../pages/Articles'
 import RamblingsPage from '../pages/RamblingsPage'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
@@ -46,8 +45,8 @@ class App extends Component {
                 <Route exact path='/scribbles' render={() => (
                   <RamblingsPage />
                 )} />
-                <Route exact path='/scribbles/*' render={() => (
-                  <Scribble />
+                <Route exact path='/scribbles/:id' render={(props) => (
+                  <Scribble {...props} />
                 )} />
                 <Route exact path='/bingo' render={() => (
                   <BingoPage />
@@ -57,9 +56,6 @@ class App extends Component {
                 )} />
                 <Route exact path='/resume' render={() => (
                   <ResumePage />
-                )} />
-                <Route exact path='/contact' render={() => (
-                  <ContactPage />
                 )} />
                 <Route exact path='/checkout-demo' render={() => (
                   <div>
