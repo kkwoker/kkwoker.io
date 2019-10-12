@@ -51,6 +51,15 @@ export default function Scribble (props) {
   const postId = props.match.params.id.split('-')[3]
   const post = posts.find(post => post.slug === postId)
 
+  const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+  const d = new Date(post.date)
+  const date = d.getDate() + 1
+  const month = d.getMonth() + 1
+  const year = d.getFullYear()
+  const fullDate = `${year}-${month}-${date}`
+  const writtenDate = `${days[d.getDay()]}, ${months[d.getMonth()]} ${date}, ${year}`
+
   return (
     <div>
       <Header />
@@ -60,7 +69,7 @@ export default function Scribble (props) {
             {post.title}
           </Typography>
           <Typography className={classes.heading} gutterBottom>
-            Friday, Oct 11, 2019
+            {writtenDate}
           </Typography>
           <div className={classes.root}>
             {
