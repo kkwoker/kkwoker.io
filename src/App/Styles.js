@@ -12,7 +12,6 @@ export const AppStyle = styled.div`
 
   h2 {
     font-size: 20px;
-    margin-left: 2px;
     ${media.mediumUp`
       font-size: 25px;
     `}

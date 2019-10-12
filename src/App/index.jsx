@@ -8,6 +8,7 @@ import NotFound from '../pages/NotFound'
 import BingoPage from '../pages/BingoPage'
 import ResumePage from '../pages/ResumePage'
 import BlogPage from '../pages/BlogPage'
+import Scribble from '../pages/Scribble'
 import ContactPage from '../pages/ContactPage'
 import Articles from '../pages/Articles'
 import RamblingsPage from '../pages/RamblingsPage'
@@ -42,8 +43,11 @@ class App extends Component {
                 <Route exact path='/blog' render={() => (
                   <BlogPage />
                 )} />
-                <Route exact path='/ramblings' render={() => (
+                <Route exact path='/scribbles' render={() => (
                   <RamblingsPage />
+                )} />
+                <Route exact path='/scribbles/*' render={() => (
+                  <Scribble />
                 )} />
                 <Route exact path='/bingo' render={() => (
                   <BingoPage />

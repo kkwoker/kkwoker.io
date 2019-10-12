@@ -1,9 +1,8 @@
-import React from 'react';
+import React from 'react'
 
 class Card extends React.Component {
-
-  render() {
-    const { imgSrc } = this.props;
+  render () {
+    const { imgSrc } = this.props
     return (
       <div>
         NAME
@@ -13,4 +12,4 @@ class Card extends React.Component {
   }
 }
 
-export default Card;
+export default Card

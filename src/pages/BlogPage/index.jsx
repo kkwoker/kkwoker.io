@@ -1,58 +1,57 @@
 // The Social Page is intended as an infinite scroll social media posting, all about ME.
 
-import React from 'react';
-import ImageLoader from '../../components/ImageLoader';
-import Header from '../../components/Header';
+import React from 'react'
+import ImageLoader from '../../components/ImageLoader'
+import Header from '../../components/Header'
 import {
   BlogPostsList,
   ImageStyle,
   ContentStyle,
   BlogPageDiv,
   BlogPost,
-  PostTitle,
-} from './Styles';
-import posts from '../../assets/posts';
+  PostTitle
+} from './Styles'
+import posts from '../../assets/posts'
 
 // Not the best way of doing this...
 const publishedPosts = posts
   .filter(post => post.draft === false)
   .sort(post => post.date)
-  .reverse();
+  .reverse()
 
 class BlogPage extends React.PureComponent {
-
-  postPreviews() {
+  postPreviews () {
     return publishedPosts.map(post =>
       <BlogPost key={post.routeKey}>
         <div className='divider'>...</div>
         <br />
         <a href={`blog/${post.routeKey}`} key={post.routeKey}>
           {
-            (post.imageSrc) ?
-              <ImageLoader
+            (post.imageSrc)
+              ? <ImageLoader
                 id={post.routeKey}
                 styleComponent={ImageStyle}
                 src={post.imageSrc}
-                alt={post.imageAlt} /> :
-              <div id={post.routeKey} className='image'>{post.imageFiller}</div>
+                alt={post.imageAlt} />
+              : <div id={post.routeKey} className='image'>{post.imageFiller}</div>
           }
           <br />
           <PostTitle> { post.title } </PostTitle>
           <br />
           <ContentStyle>
             <sub> { new Date(post.date).toDateString() } </sub>
-            <div className='overflow-ellipsis' dangerouslySetInnerHTML={{__html: post.html}} />
+            <div className='overflow-ellipsis' dangerouslySetInnerHTML={{ __html: post.html }} />
           </ContentStyle>
         </a>
       </BlogPost>
-    );
+    )
   }
 
-  render() {
+  render () {
     return (
-      <div> 
+      <div>
         <Header />
-        Coming soon! 
+        Coming soon!
       </div>
     )
     return (
@@ -70,4 +69,4 @@ class BlogPage extends React.PureComponent {
   }
 }
 
-export default BlogPage;
+export default BlogPage
