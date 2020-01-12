@@ -1,5 +1,15 @@
 [
   {
+    "slug": "how-to-host-this-site",
+    "title": "How to Host This Site",
+    "date": "2019-06-06T00:00:00.000Z",
+    "tags": [
+      "tech"
+    ],
+    "draft": false,
+    "html": "<p>First, you&#39;ll need a domain name. I pay for a yearly subscription to\nmine using AWS Route53. All you need is an AWS account, go into the\nconsole, navigate to Route53, and under domain registration, search for\nyour desired domain, follow the steps and proceed to payment.</p>\n<p>Then you&#39;ll need a location to store your HTML and JavaScript static files.\nSince I&#39;m already on AWS, I might as well use the cheap solution of S3\nstati site hosting. I just need to upload my static files there, switch\non static site hosting, and viola, I can access my website from the\ngross looking s3 public url.</p>\n<p>Next, I like to enable CloudFront CDN distribution to get the best out\nof content replication over nodes across the globe. This helps speed up\nthe serving time of my website.</p>\n<p>Go on AWS CloudFront and create a distribution. Select Web, and for the\norigin domain name, select the S3 bucket that you created for hosting\nstatic websites. The distribution takes about half an hour to create.\nI should be able to see a cloudfront domain name for my distribution, mine is\n d146o61d41r0rr.cloudfront.net. Try accessing it to see if your website\ncan be accessed.</p>\n<p>To change the cloudfront domain name to my own, I&#39;ll need to switch it to my newly purchased\ndomain name. Go to Route53 to start by creating a Hosted Zone. A hosted\nzone allows you to keep a list of DNS records that route different\nsubdomains to other parts of the web. Add the following A NAME record:</p>\n<pre><code>kkwoker.io.  A ALIAS d146o61d41r0rr.cloudfront.net\n</code></pre><p>The A type record is an alias record that maps domain name to domain\nname, in this case, kkwoker.io to d146o61d41r0rr.cloudfront.net.</p>\n<p>To check when my record has been propagated and is accessible from DNSs\naround the world, I go to <a href=\"https://dnschecker.org/\">https://dnschecker.org/</a> to enter in my record\nand check that all the regions are resolved.</p>\n<p>All of this AWS setup costs me about $1.00 every month. Additionally, my\n<code>.io</code> registered domain name is renewed for $39.00 once a year. If you buy a\n<code>.com</code> domain name, it&#39;ll be only $12.</p>\n<p>And finally... Whenever I make a change to my website locally, I use the\ns3_website rubygem from here:\n<a href=\"https://github.com/laurilehmijoki/s3_website\">https://github.com/laurilehmijoki/s3_website</a> to automatically sync my\nstatic files to S3 and run a CloudFront invalidation. My deployments are\none command away!</p>\n<p>I didn&#39;t talk about how I create the static files. But if you&#39;re\ninterested, you can see all the code on my GitHub profile:</p>\n<blockquote>\n<p><a href=\"http://github.com/kkwoker/kkwoker.io\">http://github.com/kkwoker/kkwoker.io</a></p>\n</blockquote>\n<p>Happy coding!</p>\n"
+  },
+  {
     "slug": "shape",
     "title": "Shape",
     "date": "2019-10-09T00:00:00.000Z",
