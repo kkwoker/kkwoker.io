@@ -99,7 +99,7 @@ function CardContainer (props) {
         <div className={classes.root}>
           {
             props.post.tags.map(tag => (
-              <Chip className={classes.chip} size='small' label={tag} variant='outlined' />
+              <Chip key={tag} className={classes.chip} size='small' label={tag} variant='outlined' />
             ))
           }
         </div>
@@ -121,7 +121,7 @@ export default function RamblingsPage () {
       <h2> Scribbles </h2>
       <div>
         {posts.map(post => (
-          <CardContainer post={post} />
+          <CardContainer key={post.slug} post={post} />
         ))}
       </div>
     </div>

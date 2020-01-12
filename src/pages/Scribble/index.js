@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Header from '../../components/Header'
 import { Link } from 'react-router-dom'
 import Card from '@material-ui/core/Card'
@@ -51,6 +51,8 @@ export default function Scribble (props) {
   const classes = useStyles()
   const postId = props.match.params.id.split('-').slice(3).join('-')
   const post = posts.find(post => post.slug === postId)
+
+  useEffect(() => window.scrollTo(0, 0))
 
   return (
     <div>
