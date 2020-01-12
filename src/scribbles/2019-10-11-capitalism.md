@@ -3,7 +3,7 @@ slug: "capitalism"
 title: "Capitalism"
 date: 2019-10-11
 tags: [poetry, world view, opinion]
-draft: false
+draft: true
 ---
 
 Capitalism. It’s all around us. <br/>

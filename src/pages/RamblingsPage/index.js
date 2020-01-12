@@ -62,18 +62,24 @@ const useStyles = makeStyles({
   }
 })
 
+export function toWrittenDate (d) {
+  const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+  const date = d.getDate() + 1
+  const year = d.getFullYear()
+  return `${days[d.getDay()]}, ${months[d.getMonth()]} ${date}, ${year}`
+}
 
 function CardContainer (props) {
   const classes = useStyles()
 
-  const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
   const d = new Date(props.post.date)
   const date = d.getDate() + 1
   const month = d.getMonth() + 1
   const year = d.getFullYear()
   const fullDate = `${year}-${month}-${date}`
-  const writtenDate = `${days[d.getDay()]}, ${months[d.getMonth()]} ${date}, ${year}`
+  const writtenDate = toWrittenDate(d)
 
   return (
     <Card className={classes.card}>

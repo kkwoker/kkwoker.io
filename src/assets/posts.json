@@ -8,7 +8,7 @@
       "world view",
       "opinion"
     ],
-    "draft": false,
+    "draft": true,
     "html": "<p>Shape. I am shaped by the society I am in. <br/>\nI don’t have myself. The world is living me. <br/>\nWho am I? I don’t know. Let society decide. <br/>\nLet the world leaders decide. <br/>\nLet politics decide. <br/>\nLet foreign governments decide. <br/>\nI am just here. <br/>\nBrought here. <br/>\nUndecidely. <br/>\nAlmost, suddenly. <br/>\nWe are all brought here. <br/>\nUndecidely. <br/>\nAlmost, suddenly. <br/>\nBut we all have different environments, <br/>\nalbeit, one Earth, one universe. <br/>\nSo many different permutations. <br/>\nCombinations that run through this world and build up individuals. <br/>\nShape our lives. <br/>\nShape us to become world leaders, poets, business people. <br/>\nShape us to become starved, homeless, controlled. Helpless. <br/>\nWork hard? No. <br/>\nWe’re stuck. <br/>\nStuck in our social status. <br/>\nWe are all stuck.</p>\n"
   },
   {
@@ -18,7 +18,7 @@
     "tags": [
       "poetry"
     ],
-    "draft": false,
+    "draft": true,
     "html": "<p>Words. Words do not equal ideas. <br/>\nIdeas are spawn of the imagination, <br/>\nmost of the time, ideas aren’t dictated. <br/>\nYou don’t match the words with the ideas. <br/>\nThey’re points in time. They’re fluctuations. <br/>\nThey’re instances of a brief capture of a whole concept. <br/>\nHard to write down. <br/>\nHard to put on paper. <br/>\nBut we try our best.</p>\n"
   },
   {
@@ -30,7 +30,38 @@
       "world view",
       "opinion"
     ],
-    "draft": false,
+    "draft": true,
     "html": "<p>Capitalism. It’s all around us. <br/>\nIt’s most prominent in big cities.<br/>\nIt controls our well being.<br/>\nIt capitalizes on every aspect of one&#39;s life.<br/>\nSomeone out there is profiting from every action you take.<br/>\nYou make a meal, the food industry takes a cut.<br/>\nYou type on a computer, the technology companies take a cut.<br/>\nYou use the bathroom, the water and toiletry companies take a cut.<br/>\nYou get paid by your job, the government takes a cut.<br/>\nYou lift your arm, the health practitioners take a cut.<br/>\nEverything is connected.<br/>\nIt’s a web of trade.<br/>\nIt runs our lives.<br/>\nWe are continuously enslaved by it.<br/>\nWho deserves these cuts?<br/>\nWhich companies deserve our consumerism?<br/>\nWe decide.</p>\n"
+  },
+  {
+    "slug": "what-devops-means-to-me",
+    "title": "What \"Devops\" Means to Me",
+    "date": "2019-10-11T00:00:00.000Z",
+    "tags": [
+      "tech"
+    ],
+    "draft": false,
+    "html": "<p>Many people have different definitions to what &quot;Devops&quot; means.\nI&#39;ve gotten a chance to work with teams that embed devops into their\npractices, and here&#39;s my take on it.</p>\n<p>First off, some backstory. A long time ago, there was a software\ndevelopment process called &quot;waterfall&quot;. The main idea is that each\nteam completed their tasks and passed the software on to the next team.\nIt was sequential. The developement team would build the application,\nthen they would give it to the deployment team to put it into production.\nThis was all done with minimal communication. When issues occured in the\napplication, the blame game was set in motion.</p>\n<p>The deployment team blames developers code for not meeting standards,\nand developers blame deployment for not catering to their code. The\nsoftware jumps back and forth.</p>\n<p>Some issues that can happen:</p>\n<ul>\n<li>specific versions of modules needed to be installed but was not\ndocumented for deployment team</li>\n<li>environments are not reproducible because undocumented processes were\nused to create them</li>\n<li>new release of code was not backwards compatible with other software\nthat was using it</li>\n<li>the code was not built to scale to higher degrees of users</li>\n</ul>\n<p>And so, havoc was ensued, timelines were pushed, and customers never got\ntheir software.</p>\n<p>Fast forward to today, everyone talks about &quot;agile software development&quot;.\nThe agile methodology centers around being on your toes and being suseptible to change.\nDevops, is a spawn from the gile methodology. An amalgamation of &quot;developers&quot;\nand &quot;operations&quot;, where one person or team is thinking about both\ntogether. It says that when the software is created, it should be thinking\nabout operations and being production-ready at the start of writing code.\nDevelopers ensure that their software dependencies are laid out, their environments are\nreproducible, and that the integrations with other software are working\ncorrectly. To make things easier, Each commit to the software\nruns a suite of testing that ensures that at every step, the software\ncan still be easily deployed to customers. This type of testing is called\ncontinuous integration. Developers get continual fast feedback on their\nlatest code changes, instead of waiting for months for another team to\nshow them. The faster this feedback the developers have, the easier it is\nfor them to fix issues. By deploying regularly to production-like systems,\nit becomes easier to release when it&#39;s time to deliver to stakeholders. Being\nable to continually deliver features without being blocked by release\nissues is called Continuous Delivery. The barrier between developers and\noperations is removed and software delivery is much faster.</p>\n<p>So that&#39;s my take on Devops. It&#39;s not in the tools, it&#39;s not a team\nthat&#39;s solely devoted &quot;Devops&quot;, it&#39;s a software development mindset.\nA mindset where your code is rigorously tested all\nthe time, where communication is key, and where you are capable of delivering to customers whenever you need to.</p>\n<p>Edit:</p>\n<p>I&#39;m probably missing tons of other ideas behind devops.</p>\n<ul>\n<li>Automation</li>\n<li>Ephemeral systems</li>\n<li>Small feedback cycles</li>\n<li>etc</li>\n</ul>\n<p>But for another time...</p>\n"
+  },
+  {
+    "slug": "review-voyage-in-the-dark",
+    "title": "Book Review: Voyage in the Dark - Jean Rhys",
+    "date": "2019-11-23T00:00:00.000Z",
+    "tags": [
+      "literature"
+    ],
+    "draft": false,
+    "html": "<p>This 1943 novel by Jean Rhys is an interesting one. It mainly uses the\nstream of consciousness mode to deliver the thoughts and dream-like\nideas of the main character, Anna Morgan. The novel draws cultural,\nracial, feminist ideas as well. The main novel that Rhys is most famous\nfor, and the best example of a stream of consciousness is probably &quot;The\nWild Sargasso Sea&quot;, but I haven&#39;t read that one yet.</p>\n<blockquote>\n<p>“A curtain fell and then I was here.&quot;</p>\n</blockquote>\n<p>This very important line says a lot. Anna is living in London, but feels\nand remembers her distant self living back in her original home in the\nWest Indies. The curtains falling symbolizes her play-like being, in\nthis new city where all is a stage that she was suddenly put on.\nThroughout the novel, she frequently describes London as grey and\nfrowning, while her visions of the past West Indie life was colorful and\njoyous.</p>\n<blockquote>\n<p>Reading this made me think of the similar state I felt when I first\nmoved from Vancouver to Toronto. The buildings are much higher here, you\ncan&#39;t see off into the mountains, nor into the distant ocean. It felt\nlike I was trapped, in a video game where the parts I couldn&#39;t see were\njust not rendered yet. The mass amounts of people all full of determination,\nwith places to be and a sense of self-centered importantance, all felt\nvery alienated to me.</p>\n</blockquote>\n<p>And then there&#39;s the racial part of the novel. Anna&#39;s step mother is\nseen quite racist when she says that the servant, Francine, as lesser.\nShe tries to teach Anna British feminin ideas, but to her loss, Anna\nrejects it. Anna’s internalization of her race is complicated by her\nappearance as physically white, but her desires to be black. This desire\ncame from her upbringing in the West Indies where she grew up with the\nblack community and felt they were more expressive and free than the British\nideals that she was meant to be. “Being black is warm and gay, being white\nis cold and sad”, she says.</p>\n<p>When putting on a feminism lens, you can see some of the ideas of &quot;The New Woman&quot;\nthat is an immerging trend in this Modernist era of writing. In the novel, women\nare frequently referred to as ‘tart’, which means a provocatively or\npromiscuously dressed female. A ‘tart’ is a softer version of ‘whore’,\n‘skank’, or ‘slut’ and implies that the woman engages in frequent detrimental\nsexual encounters. This dialect boxes women in as degraded prostitutes without\nthe same sexual freedom rights that men enjoy.  Anna Morgan is so immersed\nin this society and believes women have no other choice when she says “why\nshouldn’t she be a tart, it’s just as good as anything else, as far as I can see”.</p>\n<p>Even at the beginning of the novel, Anna is reading a book about a woman who\nuses her sexuality against men in order to obtain wealth and status. This\nperhaps is one of the contributing factors for why Anna goes down the path\nof sexually exploiting herself in dalliances with random men in hopes of\ngetting better fortunes.</p>\n<p>Eventually, Anna becomes pregnant and goes through an illegal abortion.\nShe goes through a final stream of consciousness saying that she will repeat\nall of unbelonging again. She begins to swirl\ninto a darkness where she almost kills herself. In the original version\nof the story, she does kill herself, but it was later revised so that\nshe can truely suffer and not be released from it.</p>\n<p>I think the moral of the story is to say that, in Anna&#39;s situation of\noppressed feminism, of unsure self-identification, she is bound to fall\ninto suicidal darkness in a society where she doesn&#39;t belong.</p>\n"
+  },
+  {
+    "slug": "what-i-leanred-from-working-with-data-scientists",
+    "title": "What I learned from working with data scientists",
+    "date": "2020-01-11T00:00:00.000Z",
+    "tags": [
+      "tech",
+      "data science"
+    ],
+    "draft": true,
+    "html": "<p>I&#39;ve been working as a software developer of about 5 years now, but\nsince my current start-up&#39;s latest pivot, I became more useful working\nwith data scientists on research and model building. Although I had some\nexperience machine learning and deep learning in my undergraduate studies\non machine learning and deep learning, I was no where near the caliber\nof scientific knowledge as the phDs I was helping. However, by a month\nand a half in, I am figuring out what it means to be a data scientist.</p>\n<p>What I found different from product development and scientific research\nis a few of the learnings I found.</p>\n<p>1.</p>\n"
   }
 ]

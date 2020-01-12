@@ -10,6 +10,7 @@ import Chip from '@material-ui/core/Chip'
 import { makeStyles } from '@material-ui/core/styles'
 import posts from '../../assets/posts.json'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
+import { toWrittenDate } from '../RamblingsPage'
 
 const useStyles = makeStyles({
   card: {
@@ -48,17 +49,8 @@ const useStyles = makeStyles({
 
 export default function Scribble (props) {
   const classes = useStyles()
-  const postId = props.match.params.id.split('-')[3]
+  const postId = props.match.params.id.split('-').slice(3).join('-')
   const post = posts.find(post => post.slug === postId)
-
-  const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-  const d = new Date(post.date)
-  const date = d.getDate() + 1
-  const month = d.getMonth() + 1
-  const year = d.getFullYear()
-  const fullDate = `${year}-${month}-${date}`
-  const writtenDate = `${days[d.getDay()]}, ${months[d.getMonth()]} ${date}, ${year}`
 
   return (
     <div>
@@ -69,7 +61,7 @@ export default function Scribble (props) {
             {post.title}
           </Typography>
           <Typography className={classes.heading} gutterBottom>
-            {writtenDate}
+            {toWrittenDate(new Date(post.date))}
           </Typography>
           <div className={classes.root}>
             {
