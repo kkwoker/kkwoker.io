@@ -6,9 +6,9 @@ tags: [literature]
 draft: false
 ---
 
-This 1943 novel by Jean Rhys is an interesting one. It mainly uses the
-stream of consciousness mode to deliver the thoughts and dream-like
-ideas of the main character, Anna Morgan. The novel draws cultural,
+Voyage in the Dark is a 1943 Modernist novel written by Jean Rhys, and uses the
+stream of consciousness mode to deliver thoughts and dream-like visions
+of the main character. The novel draws cultural,
 racial, feminist ideas as well. The main novel that Rhys is most famous
 for, and the best example of a stream of consciousness is probably "The
 Wild Sargasso Sea", but I haven't read that one yet.

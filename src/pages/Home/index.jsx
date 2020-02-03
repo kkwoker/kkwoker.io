@@ -1,10 +1,7 @@
 import React from 'react'
-import Header from '../../components/Header'
+import NavBar from '../../components/NavBar'
 import WebGL from '../../components/WebGL'
 import { makeStyles } from '@material-ui/core/styles'
-import {
-  HomeStyle
-} from './Styles'
 
 const useStyles = makeStyles({
   footer: {
@@ -16,8 +13,8 @@ const useStyles = makeStyles({
 export default function Home () {
   const classes = useStyles()
   return (
-    <HomeStyle>
-      <Header />
+    <div>
+      <NavBar />
 
       <WebGL />
 
@@ -28,8 +25,8 @@ export default function Home () {
               kkwoker@gmail.com
           </a>
         </div>
-        <div> Last Updated: Oct 12th, 2019 </div>
+        <div> Last Updated: Feb 2nd, 2020 </div>
       </div>
-    </HomeStyle>
+    </div>
   )
 }

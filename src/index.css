@@ -20,10 +20,15 @@
   border: 1px solid red;
 }
 
+@font-face {
+  font-family: 'JetBrains';
+  src: url(assets/JetBrainsMono-1.0.0/JetBrainsMono-Regular.ttf) format('truetype');
+}
+
 body {
   margin: 0;
   padding: 15px;
-  font-family: helvetica;
+  font-family: 'JetBrains';
   background-color: #222222;
   color: #f2f2f2;
 }

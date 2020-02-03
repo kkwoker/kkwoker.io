@@ -7,9 +7,6 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles({
-  header: {
-    fontFamily: 'AvenirNextCondensed-DemiBold'
-  },
   navBar: {
     display: 'flex',
     justifyContent: 'space-around',
@@ -49,7 +46,7 @@ export default function NavBar () {
 
         <NavButton>
           <Link to='/resume' className={classes.link}>
-          Resume
+            Me
           </Link>
         </NavButton>
 

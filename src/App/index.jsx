@@ -1,16 +1,14 @@
 import React, { Component } from 'react'
 import { AppStyle, AppContainerStyle } from './Styles'
 import Home from '../pages/Home'
-import BlogPost from '../pages/BlogPost'
 import Songs from '../pages/Songs'
 import Map from '../pages/Map'
 import NotFound from '../pages/NotFound'
 import BingoPage from '../pages/BingoPage'
 import ResumePage from '../pages/ResumePage'
-import BlogPage from '../pages/BlogPage'
 import Scribble from '../pages/Scribble'
 import Articles from '../pages/Articles'
-import RamblingsPage from '../pages/RamblingsPage'
+import ScribblesPage from '../pages/ScribblesPage'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 class App extends Component {
@@ -36,14 +34,8 @@ class App extends Component {
                     mapElement={<div style={{ height: `100%` }} />}
                   />
                 )} />
-                <Route exact path='/blog/*' render={() => (
-                  <BlogPost />
-                )} />
-                <Route exact path='/blog' render={() => (
-                  <BlogPage />
-                )} />
                 <Route exact path='/scribbles' render={() => (
-                  <RamblingsPage />
+                  <ScribblesPage />
                 )} />
                 <Route exact path='/scribbles/:id' render={(props) => (
                   <Scribble {...props} />

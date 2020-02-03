@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import * as THREE from 'three'
 
-const OrbitControls = require('three-orbit-controls')(THREE)
+//const OrbitControls = require('three-orbit-controls')(THREE)
 class Shape extends Component {
   constructor (props) {
     super(props)
